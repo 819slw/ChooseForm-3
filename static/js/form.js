@@ -63,6 +63,14 @@ $(function(){
 		$('#form').append('<div class="form-class-b add-form-obj">'+content+'</div>');
 		$('#form .add-form-obj').eq(''+length+'').find('ul').hide();
 	});
+
+	//删除表单  防止用户点错
+	$('body').on('click','.delete-form',function(){
+		let length = $('.add-form-obj').length;
+		if(length > 1){
+			$(this).parents('.add-form-obj').remove();
+		}
+	});
 })
 
 
