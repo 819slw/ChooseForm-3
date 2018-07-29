@@ -78,6 +78,8 @@ $(function () {
 			$(this).parents('.add-form-obj').remove();
 		}
 	});
+
+	$('[data-toggle="tooltip"]').tooltip()
 })
 
 
