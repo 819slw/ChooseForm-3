@@ -34,21 +34,21 @@
 			<div class="form-class-a">
 				<form class="form-horizontal">
 					<div class="form-group">
-						<label for="inputEmail3" class="col-sm-2 control-label">联系人</label>
+						<label for="inputEmail3" class="col-sm-2 control-label">联系人<span class="must-top">*</span></label>
 						<div class="col-sm-10">
-							<input type="email" class="form-control" id="inputEmail3" placeholder="联系人">
+							<input type="email" class="form-control must-top-input" id="inputEmail3" placeholder="联系人">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputEmail3" class="col-sm-2 control-label">QQ号</label>
+						<label for="inputEmail3" class="col-sm-2 control-label">QQ号<span class="must-top">*</span></label>
 						<div class="col-sm-10">
-							<input type="email" class="form-control" id="inputEmail3" placeholder="QQ号">
+							<input type="email" class="form-control must-top-input" id="inputEmail3" placeholder="QQ号">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputEmail3" class="col-sm-2 control-label">手机号</label>
+						<label for="inputEmail3" class="col-sm-2 control-label">手机号<span class="must-top">*</span></label>
 						<div class="col-sm-10">
-							<input type="email" class="form-control" id="inputEmail3" placeholder="手机号">
+							<input type="email" class="form-control must-top-input" id="inputEmail3" placeholder="手机号">
 						</div>
 					</div>
 				</form>
@@ -66,7 +66,17 @@
 				<!-- 寄卖选择弹出 -->
 				<ul>
 					<li>
-						<div class="flex-layout">
+						<div class="font-color">
+							<h3>寄卖须知</h3>
+							<p>1.为保证寄卖作品的存储和销售的便利性，委托寄卖的作品请尽量自带独立pp袋包装，且每套同类别作品包在同一包装内（例：寄卖作品为本子+随本附赠的赠品，则本子和赠品包装在同一个包装内）。如果没有包装或寄卖同时委托我方进行包装服务，将收取包装费，包装费视作品的具体情况而定，包装费标准：每份寄卖作品/0.3-0.8元</p>
+							<p>2.2.	寄卖作品的预售时间从上架到预售结束最长1个月，预售结束后如需继续寄卖服务则在预售寄卖作品发货结束后变为现货再次上架。现货寄卖服务的服务时间最长6个月，寄卖时间截止后将联系作者将作品寄回作者处。</p>
+							<p>3.3.	发货开始后每月30日-次月2日由客服联系作者进行结算，结算范围为已确认收货的寄卖作品订单。第一次结算周期为从产品发货日至当月25日（如25日之前无确认收货订单则转入下月结算），之后结算周期为上月26日至本月25号的自然月直至结束寄卖服务，结算范围为已确认收货的寄卖作品订单。</p>
+							<p>4.4.	预售的寄卖作品在开始发货到结束，数量不大的情况2-3个工作日结束预售发货，如数量较多、需要包装以及特殊时间段（例如大量作品在某月集中发售），则按照寄卖服务的下单日期安排发货。</p>
+							<p>5.5.	预售结束后，由于需要留出买家收货后反馈作品瑕疵的时间，故无法在预售结束时直接变为现货。所有寄卖作品一般在3-7个工作日之内变为现货再次上架。</p>
+							<p>6.6.	漫寻谷采用分仓发货模式，预售产品统一在上海仓库发货，如需要继续以现货的形式寄卖则在哈尔滨仓库进行现货贩售。两个仓库间的调拨费用由漫寻谷承担，委托人需承担作品寄卖至上海仓库的邮费以及寄卖结束之后的寄回邮费。</p>
+							<p>7.7.	寄卖需准备至少一张预览图（800*800,72dpi，500k以下）和至少一张宣图（750宽，72dpi，3M以下），方便我方进行寄卖作品在各平台进行宣传。</p>
+						</div>
+						<!-- <div class="flex-layout">
 							<p class="col-xs-3">画师OR社团：</p>
 							<label class="col-xs-9">
 								<input type="text" class="form-control" id="exampleInputName2" placeholder="画师OR社团">
@@ -139,15 +149,15 @@
 									<option value="2" class="Consignment-printing">否</option>
 								</select>
 							</label>
-						</div>
+						</div> -->
 						<div class="flex-layout">
 							<p class="col-xs-3">物品类型：</p>
 							<label class="col-xs-9">
 								<select class="form-control form-class-b-topLevel">
 									<option value="0">请选择</option>
-									<option value="1" class="Consignment-printing">本子</option>
-									<option value="2" class="Consignment-printing">周边</option>
-									<option value="3" class="Consignment-printing">本子+周边</option>
+									<option value="1" class="Consignment-printing">本子-寄卖费8%”</option>
+									<option value="2" class="Consignment-printing">周边-寄卖费10%”</option>
+									<option value="3" class="Consignment-printing">本子+周边套装-寄卖费9%”</option>
 								</select>
 							</label>
 						</div>
@@ -280,7 +290,7 @@
 														</td>
 														<td>
 															<p>星河纸（240g）</p>
-															<p>超感纸（128/157/300g）</p>
+															<p>超感纸=雅涂（128/157/300g）</p>
 															<p>冰白珠光（250/300g）</p>
 															<p>高阶映画（240g）</p>
 														</td>
@@ -296,6 +306,7 @@
 															<p>白牛皮（250g）</p>
 															<p>黄牛皮（250g）</p>
 															<p>蒙肯纸（100g）</p>
+															<p>大地纸（230g）</p>
 														</td>
 													</tr>
 													<tr>
@@ -454,7 +465,7 @@
 										<input type="text" class="form-control" id="exampleInputAmount" placeholder="请填写本数">
 									</label>
 								</div>
-								<p class="text-center text-red">骑马钉，胶装：1本起订，锁线胶装/裸背胶装：100本起订,精装：200本起订</p>
+								<p class="text-center text-red">骑马钉，胶装，1本起订精装，锁线胶装，裸背胶装，300本起订</p>
 								<p class="text-center text-red">此处有一段解释说明</p>
 							</li>
 						</ul>
@@ -932,7 +943,7 @@
 										<li>
 											<h2 class="text-center">橡胶挂件</h2>
 											<div class="flex-layout choose-checkbox-div">
-												<p class="col-xs-3">尺寸：</p>
+												<p class="col-xs-3">分类：</p>
 												<label class="col-xs-9 form-inline">
 													<label class="checkbox-inline">
 														<input type="checkbox" class="choose-checkbox-ul" value="0"> 橡胶挂饰
@@ -957,7 +968,55 @@
 														<option value="1" class="printing-notebook">日厂</option>
 														<option value="2" class="printing-periphery">国厂</option>
 													</select>
-													<div class="flex-layout">
+													<ul>
+														<li>
+															<div class="flex-layout">
+																<p class="col-xs-3">尺寸：</p>
+																<label class="col-xs-9 form-inline">
+																	<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
+																	<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
+																</label>
+															</div>
+															<div class="flex-layout">
+																<p class="col-xs-3">款式：</p>
+																<label class="col-xs-9 form-inline">
+																	<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+																</label>
+															</div>
+															<div class="flex-layout">
+																<p class="col-xs-3">数量：</p>
+																<label class="col-xs-9 form-inline">
+																	每款
+																	<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量1个）
+																</label>
+															</div>
+														</li>
+													</ul>
+													<ul>
+														<li>
+															<div class="flex-layout">
+																<p class="col-xs-3">尺寸：</p>
+																<label class="col-xs-9 form-inline">
+																	<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
+																	<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
+																</label>
+															</div>
+															<div class="flex-layout">
+																<p class="col-xs-3">款式：</p>
+																<label class="col-xs-9 form-inline">
+																	<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+																</label>
+															</div>
+															<div class="flex-layout">
+																<p class="col-xs-3">数量：</p>
+																<label class="col-xs-9 form-inline">
+																	每款
+																	<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量200个）
+																</label>
+															</div>
+														</li>
+													</ul>
+													<!-- <div class="flex-layout">
 														<p class="col-xs-3">尺寸：</p>
 														<label class="col-xs-9 form-inline">
 															<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
@@ -976,7 +1035,7 @@
 															每款
 															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量500个）
 														</label>
-													</div>
+													</div> -->
 												</li>
 											</ul>
 											<!-- 绕线器 -->
@@ -1283,9 +1342,10 @@
 												<p class="col-xs-3">数量：</p>
 												<label class="col-xs-9 form-inline">
 													每款
-													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
+													<input type="number" class="form-control must-write most-200" id="exampleInputName2" placeholder="款式">个（单款起订数量200个）
 												</label>
 											</div>
+											<p class="must-red">此处为必填，不能低于200</p>
 										</li>
 									</ul>
 									<!-- 其他 -->
@@ -1342,7 +1402,7 @@
 													</label>
 												</label>
 											</div>
-											<div class="flex-layout">
+											<!-- <div class="flex-layout">
 												<p class="col-xs-3">尺寸：</p>
 												<label class="col-xs-9 form-inline">
 													<span>自定义尺寸:</span>
@@ -1350,7 +1410,39 @@
 													<span>*</span>
 													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
 												</label>
+											</div> -->
+
+
+
+											<div class="flex-layout">
+												<p class="col-xs-3">尺寸：</p>
+												<label class="col-xs-9">
+													<select class="form-control form-class-b-oveLevel write-num-min-width select-other">
+														<option value="0">尺寸</option>
+														<option value="1" class="printing-notebook">9.8cm*15cm</option>
+														<option value="2" class="printing-periphery">自定义</option>
+													</select>
+													<div class="input-other">
+														<label class="col-xs-9">
+															<input type="text" class="form-control write-num-max-width must-write" id="exampleInputName2" placeholder="尺寸" style="display: inline;">
+															<span>*</span>
+															<input type="text" class="form-control write-num-max-width must-write" id="exampleInputName2" placeholder="尺寸" style="display: inline;">cm
+														</label>
+													</div>
+												</label>
 											</div>
+											<!-- <div class="flex-layout">
+												<p class="col-xs-3">自定义尺寸:</p>
+												<label class="col-xs-9">
+													<input type="text" class="form-control write-num-max-width must-write" id="exampleInputName2" placeholder="尺寸" style="display: inline;">
+													<span>*</span>
+													<input type="text" class="form-control write-num-max-width must-write" id="exampleInputName2" placeholder="尺寸" style="display: inline;">cm
+												</label>
+											</div> -->
+
+
+
+
 											<div class="flex-layout">
 												<p class="col-xs-3">款式：</p>
 												<label class="col-xs-9 form-inline">
@@ -1387,8 +1479,10 @@
 														<option value="7" class="printing-periphery">高阶映画</option>
 														<option value="8" class="printing-periphery" data-name="其他">其他</option>
 													</select>
-												</label>
-												<input type="text" class="form-control input-other" placeholder="请选择纸质类型">
+													<div class="input-other">
+														<input type="text" class="form-control" placeholder="请填写您需要的纸类名称">
+													</div>
+											</label>
 											</div>
 											<div class="flex-layout">
 												<p class="col-xs-3">形状：</p>
@@ -1556,14 +1650,22 @@
 													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
 												</label>
 											</div>
-											<div class="flex-layout">
+											<!-- <div class="flex-layout">
 												<p class="col-xs-3">数量：</p>
 												<label class="col-xs-9 form-inline">
 													每款
 													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
 												</label>
+											</div> -->
+											<div class="flex-layout">
+												<p class="col-xs-3">数量：</p>
+												<label class="col-xs-9 form-inline">
+													每款
+													<input type="number" class="form-control must-write most-500" id="exampleInputName2" placeholder="款式">个（单款起订数量500个）
+												</label>
 											</div>
-										</li>
+											<p class="must-red">此处为必填项，且不能低于500</p>
+											</li>
 										<p class="text-center text-red">如需其他特殊工艺请在交表后咨询客服</p>
 									</ul>
 									<!-- 纸质 -->
@@ -1586,8 +1688,8 @@
 														<option value="7" class="printing-periphery">高阶映画</option>
 														<option value="8" class="printing-periphery" data-name="其他">其他</option>
 													</select>
-												</label>
-												<input type="text" class="form-control input-other" placeholder="请选择纸质类型">
+													<input type="text" class="form-control input-other" placeholder="请选择纸质类型">
+											</label>
 											</div>
 											<div class="flex-layout">
 												<p class="col-xs-3">形状：</p>
@@ -1727,13 +1829,13 @@
 														<label class="col-xs-9 form-inline">
 															<select class="form-control form-class-b-oveLevel">
 																<option value="0">请选择圆形类型</option>
-																<option value="1" class="printing-notebook">2.5</option>
-																<option value="2" class="printing-periphery">3.2</option>
-																<option value="2" class="printing-periphery">3.7</option>
-																<option value="2" class="printing-periphery">4.4</option>
-																<option value="2" class="printing-periphery">5.8</option>
-																<option value="2" class="printing-periphery">7.5</option>
-																<option value="2" class="printing-periphery">10</option>
+																<option value="1" class="printing-notebook">2.5cm</option>
+																<option value="2" class="printing-periphery">3.2cm</option>
+																<option value="2" class="printing-periphery">3.7cm</option>
+																<option value="2" class="printing-periphery">4.4cm</option>
+																<option value="2" class="printing-periphery">5.8cm</option>
+																<option value="2" class="printing-periphery">7.5cm</option>
+																<option value="2" class="printing-periphery">10cm</option>
 															</select>
 														</label>
 													</div>
@@ -2276,7 +2378,7 @@
 												<p class="col-xs-3">数量：</p>
 												<label class="col-xs-9 form-inline">
 													每款
-													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
 												</label>
 											</div>
 										</li>
@@ -2284,9 +2386,9 @@
 									<!-- 不干胶 -->
 									<ul>
 										<li>
-											<h2 class="text-center">Pvc透明贴纸</h2>
+											<h2 class="text-center">不干胶</h2>
 											<select class="form-control form-class-b-oveLevel select-other">
-												<option value="0">请选择Pvc透明贴纸类型</option>
+												<option value="0">请选择P不干胶贴纸类型</option>
 												<option value="1" class="printing-notebook">21cmx29.7cm</option>
 												<option value="2" class="printing-notebook">17cmx25cm</option>
 												<option value="3" class="printing-notebook">其他</option>
@@ -2307,7 +2409,7 @@
 												<p class="col-xs-3">数量：</p>
 												<label class="col-xs-9 form-inline">
 													每款
-													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
 												</label>
 											</div>
 										</li>
@@ -2315,9 +2417,9 @@
 									<!-- Pvc贴纸 -->
 									<ul>
 										<li>
-											<h2 class="text-center">Pvc透明贴纸</h2>
+											<h2 class="text-center">PVC贴纸</h2>
 											<select class="form-control form-class-b-oveLevel select-other">
-												<option value="0">请选择Pvc透明贴纸类型</option>
+												<option value="0">请选择PVC贴纸类型</option>
 												<option value="1" class="printing-notebook">21cmx29.7cm</option>
 												<option value="2" class="printing-notebook">17cmx25cm</option>
 												<option value="3" class="printing-notebook">其他</option>
@@ -2338,7 +2440,7 @@
 												<p class="col-xs-3">数量：</p>
 												<label class="col-xs-9 form-inline">
 													每款
-													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
 												</label>
 											</div>
 										</li>
@@ -2382,7 +2484,7 @@
 								<li>
 									<h2 class="text-center">异形制品</h2>
 									<p class="padding-grid">
-										<span>如挂件立牌包装包装，腰封，硫酸纸信封，PVC信封，纸盒，纸质海报盒，PVC海报盒，PVC包装盒，PVC外书封（信封/不印刷）等</span>
+										<span>如挂件立牌包装，腰封，硫酸纸信封，PVC信封，纸盒，纸质海报盒，PVC海报盒，PVC包装盒，PVC外书封（信封/不印刷）等</span>
 										<br>
 										<span>请尽量清楚的文字描述您的所使用的材料，尺寸，特殊工艺，款式和理想中成品的样子等需求</span>
 									</p>
@@ -2414,8 +2516,8 @@
 										<label class="col-xs-9 form-inline">
 											<select class="form-control form-class-b-oveLevel">
 												<option value="0">数量:</option>
-												<option value="1" class="printing-notebook">单款1000个起订</option>
-												<option value="2" class="printing-notebook">两款各500个起订</option>
+												<option value="1" class="printing-notebook">单款1000个</option>
+												<option value="2" class="printing-notebook">两款各500个</option>
 											</select>
 										</label>
 									</div>

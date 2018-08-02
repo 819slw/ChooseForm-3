@@ -46,12 +46,10 @@ $(function () {
 	})
 
 	$('body').on('click', '.select-other', function () {
-		// $('.select-other').click(function(){
 		let length = $(this).children().length - 1;
 		let index = $(this).val();
-		console.log(length);
-		console.log(index);
 		if (length == index) {
+			console.log($(this).siblings('.input-other'));
 			$(this).siblings('.input-other').show();
 		} else {
 			$(this).siblings('.input-other').hide();
@@ -118,7 +116,12 @@ $(function () {
 		}
 	})
 
-
+	$('body').on('blur', '.most-500', function () {
+		let num = $(this).val();
+		if (num < 500) {
+			$(this).parents('.flex-layout').siblings('.must-red').show();
+		}
+	})
 
 
 	$('#submit-form').click(function () {
@@ -129,6 +132,15 @@ $(function () {
 				flag = false;
 			}
 		}
+		let formClassA = $('.form-class-a').is(':hidden');
+		if(!formClassA){
+			let isShow = $('.must-top-input');
+			for (var j = 0; j < isShow.length; j++) {
+				if (isShow[j].value == '') {
+					flag = false;
+				}
+			}
+		}
 		if (flag) {
 			alert('可以提交');
 		} else {
@@ -136,8 +148,14 @@ $(function () {
 		}
 	});
 
-
-
+	$('body').on('click','.levelTop',function(){
+		let name = $(this).val();
+		if(name == 2 || name == 4 || name == 5){
+			$('.form-class-a').hide();
+		}else{
+			$('.form-class-a').show();
+		}
+	});
 
 
 
