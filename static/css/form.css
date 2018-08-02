@@ -107,15 +107,31 @@ ul {
 	text-align: center;
 	padding: 80px 0 10px 0;
 }
-.tooltip-style{
+
+.tooltip-style {
 	width: 100%;
 	text-align: center;
 	background: none;
-	border-color:#fef2db;
+	border-color: #fef2db;
 	margin: 15px 0;
 	font-size: 36px;
 }
-.tooltip-style:hover{
+
+.tooltip-style:hover {
 	background: none;
-	border-color:#fef2db;
+	border-color: #fef2db;
+}
+
+.special-input {
+	display: none;
+}
+
+.must-red {
+	display: none;
+	color: red;
+	text-align: right;
+}
+
+.font-color {
+	color: red;
 }

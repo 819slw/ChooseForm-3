@@ -187,21 +187,25 @@
 								<h2 class="text-center">同人收藏本</h2>
 								<div class="flex-layout">
 									<p class="col-xs-3">尺寸：</p>
-									<label class="col-xs-2">
-										<select class="form-control form-class-b-oveLevel write-num-min-width">
+									<label class="col-xs-9">
+										<select class="form-control form-class-b-oveLevel write-num-min-width special-select">
 											<option value="0">尺寸</option>
 											<option value="1" class="printing-notebook">a5</option>
 											<option value="2" class="printing-periphery">b5</option>
 											<option value="3" class="printing-periphery">a4</option>
+											<option value="自定义" class="printing-periphery">自定义</option>
 										</select>
 									</label>
-									<label class="col-xs-7 flex">
-										<span>自定义尺寸:</span>
-										<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
+								</div>
+								<div class="flex-layout special-input">
+									<p class="col-xs-3">自定义尺寸:</p>
+									<label class="col-xs-9">
+										<input type="text" class="form-control write-num-max-width must-write" id="exampleInputName2" placeholder="尺寸" style="display: inline;">
 										<span>*</span>
-										<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
+										<input type="text" class="form-control write-num-max-width must-write" id="exampleInputName2" placeholder="尺寸" style="display: inline;">cm
 									</label>
 								</div>
+								<p class="must-red">此项为必填项</p>
 								<p class="text-center text-red">封面和外封等尺寸请在交表后咨询客服后再进行设计</p>
 								<div class="flex-layout">
 									<p class="col-xs-3">印刷品类品：</p>
@@ -211,7 +215,7 @@
 											<option value="1" class="printing-notebook">小说</option>
 											<option value="2" class="printing-periphery">彩色画集</option>
 											<option value="3" class="printing-periphery">黑白画集</option>
-											<option value="4" class="printing-periphery">彩色画集</option>
+											<option value="4" class="printing-periphery">彩色漫画</option>
 											<option value="5" class="printing-periphery">黑白漫画</option>
 										</select>
 									</label>
@@ -254,6 +258,7 @@
 											<div class="form-group">
 												<input type="text" class="form-control write-num-max-width" placeholder="">g
 											</div>
+											<p class="font-color">请根据下方列表中的纸张类别来填写内容</p>
 										</div>
 										<div class="form-inline padding-5">
 											<table class="table table-bordered">
@@ -431,10 +436,10 @@
 								</div>
 								<p class="text-center text-red">能想到的基本都可以做，其他具体需求请在交表后咨询客服</p>
 								<div class="flex-layout">
-									<p class="col-xs-3">类型：</p>
+									<p class="col-xs-3">请选择覆膜样式：</p>
 									<label class="col-xs-9">
 										<select class="form-control form-class-b-oveLevel">
-											<option value="0">请选择类型</option>
+											<option value="0">请选择覆膜样式</option>
 											<option value="1" class="printing-notebook">骑马钉</option>
 											<option value="2" class="printing-periphery">胶装</option>
 											<option value="3" class="printing-periphery">锁线胶装</option>
@@ -526,6 +531,7 @@
 																</select>
 															</label>
 														</div>
+														<p class="text-center text-red">默认龙虾扣，其它选项需要另行付费</p>
 														<div class="flex-layout">
 															<p class="col-xs-3">尺寸：</p>
 															<label class="col-xs-9 form-inline">
@@ -575,7 +581,7 @@
 																	<option value="1" class="printing-notebook">其他</option>
 																</select>
 																<div class="input-other">
-																	<input type="text" class="form-control" placeholder="其他">
+																	<input type="text" class="form-control" placeholder="请填写自定义的特殊工艺">
 																</div>
 															</label>
 														</div>
@@ -642,7 +648,7 @@
 																	<option value="1" class="printing-notebook">其他</option>
 																</select>
 																<div class="input-other">
-																	<input type="text" class="form-control" placeholder="其他">
+																	<input type="text" class="form-control" placeholder="请填写自定义的特殊工艺">
 																</div>
 															</label>
 														</div>
@@ -691,11 +697,12 @@
 															<p class="col-xs-3">边缘色&线条颜色&背板颜色：</p>
 															<label class="col-xs-9">
 																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">请选择配件</option>
+																	<option value="0">请选择颜色</option>
 																	<option value="1" class="printing-notebook">金色</option>
 																	<option value="1" class="printing-notebook">红铜色</option>
 																	<option value="1" class="printing-notebook">其它选项（请咨询客服）</option>
 																</select>
+																<!-- <p class="font-color">默认龙虾扣，其他选项需要另行付费</p> -->
 																<div>
 																	默认以上三个部分颜色统一,其他咨询客服;
 																</div>
@@ -735,7 +742,7 @@
 													</li>
 												</ul>
 											</li>
-											<li>
+											<!-- <li>
 												<select class="form-control form-class-b-oveLevel">
 													<option value="0">请选择配件类型</option>
 													<option value="1" class="printing-notebook">龙虾扣</option>
@@ -746,13 +753,13 @@
 													<option value="6" class="printing-periphery">其他</option>
 												</select>
 												<p class="text-center text-red">默认龙虾扣，其它选项需要另行付费</p>
-											</li>
-											<p class="text-center text-red">此处会有一段文字说明</p>
+											</li> -->
+											<!-- <p class="text-center text-red">此处会有一段文字说明</p> -->
 										</ul>
 
 										<!-- 透明挂件 -->
 										<ul>
-											<li>
+											<p>
 												<h2 class="text-center">透明挂件(柯式印刷)</h2>
 												<div class="flex-layout">
 													<p class="col-xs-3">印刷：</p>
@@ -912,1437 +919,1278 @@
 													<p class="col-xs-3">数量：</p>
 													<label class="col-xs-9 form-inline">
 														每款
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
+														<input type="number" class="form-control must-write most-200" id="exampleInputName2" placeholder="款式">个（单款起订数量200个）
 													</label>
 												</div>
-											</li>
-											<p class="text-center text-red">此处会有说明透明挂件的文字</p>
-										</ul>
-
-										<!-- 橡胶挂件 -->
-										<ul>
-											<li>
-												<h2 class="text-center">橡胶挂件</h2>
-												<div class="flex-layout choose-checkbox-div">
-													<p class="col-xs-3">尺寸：</p>
-													<label class="col-xs-9 form-inline">
-														<label class="checkbox-inline">
-															<input type="checkbox" class="choose-checkbox-ul" value="0"> 橡胶挂饰
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" class="choose-checkbox-ul" value="1"> 绕线器
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" class="choose-checkbox-ul" value="2"> 硅胶挂件
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" class="choose-checkbox-ul" value="3"> 其他
-														</label>
-													</label>
-												</div>
-												<!-- 橡胶挂饰   -->
-												<ul>
-													<li>
-														<h2 class="text-center">橡胶挂饰</h2>
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择橡胶挂饰类型</option>
-															<option value="1" class="printing-notebook">日厂</option>
-															<option value="2" class="printing-periphery">国厂</option>
-														</select>
-														<div class="flex-layout">
-															<p class="col-xs-3">尺寸：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
-																<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">款式：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">数量：</p>
-															<label class="col-xs-9 form-inline">
-																每款
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量500个）
-															</label>
-														</div>
-													</li>
-												</ul>
-												<!-- 绕线器 -->
-												<ul>
-													<li>
-														<h2 class="text-center">绕线器</h2>
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择绕线器类型</option>
-															<option value="1" class="printing-notebook">日厂</option>
-															<option value="2" class="printing-periphery">国厂</option>
-														</select>
-														<div class="flex-layout">
-															<p class="col-xs-3">尺寸：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
-																<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">款式：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">数量：</p>
-															<label class="col-xs-9 form-inline">
-																每款
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
-															</label>
-														</div>
-													</li>
-												</ul>
-												<!-- 硅胶挂件 -->
-												<ul>
-													<li>
-														<h2 class="text-center">硅胶挂件</h2>
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择硅胶挂件类型</option>
-															<option value="1" class="printing-notebook">日厂</option>
-															<option value="2" class="printing-periphery">国厂</option>
-														</select>
-														<div class="flex-layout">
-															<p class="col-xs-3">尺寸：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
-																<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">款式：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">数量：</p>
-															<label class="col-xs-9 form-inline">
-																每款
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
-															</label>
-														</div>
-													</li>
-												</ul>
-												<!-- 其他 -->
-												<ul>
-													<li>
-														<h2 class="text-center">硅胶挂件</h2>
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择硅胶挂件类型</option>
-															<option value="1" class="printing-notebook">日厂</option>
-															<option value="2" class="printing-periphery">国厂</option>
-														</select>
-														<div class="flex-layout">
-															<p class="col-xs-3">尺寸：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
-																<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">款式：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">数量：</p>
-															<label class="col-xs-9 form-inline">
-																每款
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
-															</label>
-														</div>
-													</li>
-												</ul>
-											</li>
-											<p class="text-center text-red">此处会有一段解释说明</p>
-										</ul>
+												<p class="must-red">此项为必填,且数量不能低于200</p>
 									</li>
-								</ul>
+									<p class="text-center text-red">此处会有说明透明挂件的文字</p>
+									</ul>
 
-								<!-- 立牌 -->
-								<ul>
-									<li>
-										<h2 class="text-center">立牌</h2>
-										<select class="form-control form-class-b-oveLevel">
-											<option value="0">请选择立牌类型</option>
-											<option value="1" class="printing-notebook">普通立牌</option>
-											<option value="2" class="printing-periphery">多层场景立牌</option>
-											<option value="3" class="printing-periphery">挂立两用立牌</option>
-											<option value="4" class="printing-periphery">其他</option>
-										</select>
-										<!-- 普通立牌 -->
-										<ul>
-											<li>
-												<h2 class="text-center">普通立牌</h2>
-												<div class="flex-layout">
-													<p class="col-xs-3">印刷：</p>
-													<label class="col-xs-9">
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择印刷种类</option>
-															<option value="1" class="printing-notebook">单面印刷（默认底座单面图案）</option>
-															<option value="1" class="printing-notebook">双面印刷（默认底座单面图案）</option>
-														</select>
+									<!-- 橡胶挂件 -->
+									<ul>
+										<li>
+											<h2 class="text-center">橡胶挂件</h2>
+											<div class="flex-layout choose-checkbox-div">
+												<p class="col-xs-3">尺寸：</p>
+												<label class="col-xs-9 form-inline">
+													<label class="checkbox-inline">
+														<input type="checkbox" class="choose-checkbox-ul" value="0"> 橡胶挂饰
 													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">特殊工艺：</p>
-													<label class="col-xs-9">
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 镶钻
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫银
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 镭射银
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 层次印刷
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 部分透明
-														</label>
-														<p class="text-red">如需其他特殊工艺请在交表后咨询客服</p>
+													<label class="checkbox-inline">
+														<input type="checkbox" class="choose-checkbox-ul" value="1"> 绕线器
 													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">尺寸：</p>
-													<label class="col-xs-9 form-inline">
-														<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
-														<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
+													<label class="checkbox-inline">
+														<input type="checkbox" class="choose-checkbox-ul" value="2"> 硅胶挂件
 													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">款式：</p>
-													<label class="col-xs-9 form-inline">
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+													<label class="checkbox-inline">
+														<input type="checkbox" class="choose-checkbox-ul" value="3"> 其他
 													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">数量：</p>
-													<label class="col-xs-9 form-inline">
-														每款
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
-													</label>
-												</div>
-											</li>
-										</ul>
-										<!-- 多层场景立牌 -->
-										<ul>
-											<li>
-												<h2 class="text-center">多层场景立牌</h2>
-												<div class="flex-layout">
-													<p class="col-xs-3">印刷：</p>
-													<label class="col-xs-9">
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择印刷种类</option>
-															<option value="1" class="printing-notebook">单面印刷（默认底座单面图案）</option>
-															<option value="1" class="printing-notebook">双面印刷（默认底座单面图案）</option>
-														</select>
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">特殊工艺：</p>
-													<label class="col-xs-9">
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫金
+												</label>
+											</div>
+											<!-- 橡胶挂饰   -->
+											<ul>
+												<li>
+													<h2 class="text-center">橡胶挂饰</h2>
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择橡胶挂饰类型</option>
+														<option value="1" class="printing-notebook">日厂</option>
+														<option value="2" class="printing-periphery">国厂</option>
+													</select>
+													<div class="flex-layout">
+														<p class="col-xs-3">尺寸：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
+															<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
 														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 镶钻
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">款式：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
 														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫银
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">数量：</p>
+														<label class="col-xs-9 form-inline">
+															每款
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量500个）
 														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 镭射银
+													</div>
+												</li>
+											</ul>
+											<!-- 绕线器 -->
+											<ul>
+												<li>
+													<h2 class="text-center">绕线器</h2>
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择绕线器类型</option>
+														<option value="1" class="printing-notebook">日厂</option>
+														<option value="2" class="printing-periphery">国厂</option>
+													</select>
+													<div class="flex-layout">
+														<p class="col-xs-3">尺寸：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
+															<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
 														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 层次印刷
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">款式：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
 														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 部分透明
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">数量：</p>
+														<label class="col-xs-9 form-inline">
+															每款
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
 														</label>
-														<p class="text-red">如需其他特殊工艺请在交表后咨询客服</p>
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">尺寸：</p>
-													<label class="col-xs-9 form-inline">
-														<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
-														<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">款式：</p>
-													<label class="col-xs-9 form-inline">
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">数量：</p>
-													<label class="col-xs-9 form-inline">
-														每款
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
-													</label>
-												</div>
-											</li>
-										</ul>
-										<!-- 挂立两用立牌 -->
-										<ul>
-											<li>
-												<h2 class="text-center">挂立两用立牌</h2>
-												<div class="flex-layout">
-													<p class="col-xs-3">印刷：</p>
-													<label class="col-xs-9">
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择印刷种类</option>
-															<option value="1" class="printing-notebook">单面印刷（默认底座单面图案）</option>
-															<option value="1" class="printing-notebook">双面印刷（默认底座单面图案）</option>
-														</select>
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">特殊工艺：</p>
-													<label class="col-xs-9">
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫金
+													</div>
+												</li>
+											</ul>
+											<!-- 硅胶挂件 -->
+											<ul>
+												<li>
+													<h2 class="text-center">硅胶挂件</h2>
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择硅胶挂件类型</option>
+														<option value="1" class="printing-notebook">日厂</option>
+														<option value="2" class="printing-periphery">国厂</option>
+													</select>
+													<div class="flex-layout">
+														<p class="col-xs-3">尺寸：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
+															<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
 														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 镶钻
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">款式：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
 														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫银
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">数量：</p>
+														<label class="col-xs-9 form-inline">
+															每款
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
 														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 镭射银
+													</div>
+												</li>
+											</ul>
+											<!-- 其他 -->
+											<ul>
+												<li>
+													<h2 class="text-center">硅胶挂件</h2>
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择硅胶挂件类型</option>
+														<option value="1" class="printing-notebook">日厂</option>
+														<option value="2" class="printing-periphery">国厂</option>
+													</select>
+													<div class="flex-layout">
+														<p class="col-xs-3">尺寸：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
+															<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
 														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 层次印刷
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">款式：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
 														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 部分透明
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">数量：</p>
+														<label class="col-xs-9 form-inline">
+															每款
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
 														</label>
-														<p class="text-red">如需其他特殊工艺请在交表后咨询客服</p>
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">配件：</p>
-													<label class="col-xs-9">
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择配件种类</option>
-															<option value="1" class="printing-notebook">手机绳</option>
-															<option value="1" class="printing-notebook">银色D字扣</option>
-															<option value="1" class="printing-notebook">银色钥匙圈</option>
-															<option value="1" class="printing-notebook">银色珠链</option>
-															<option value="1" class="printing-notebook">银色龙虾扣</option>
-															<option value="1" class="printing-notebook">星星型配件</option>
-															<option value="1" class="printing-notebook">心形配件</option>
-															<option value="1" class="printing-notebook">金色珠链</option>
-															<option value="1" class="printing-notebook">金色C字扣钥匙圈双用</option>
-															<option value="1" class="printing-notebook">金色D字扣钥匙圈双用</option>
-														</select>
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">尺寸：</p>
-													<label class="col-xs-9 form-inline">
-														<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
-														<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">款式：</p>
-													<label class="col-xs-9 form-inline">
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">数量：</p>
-													<label class="col-xs-9 form-inline">
-														每款
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
-													</label>
-												</div>
-											</li>
-										</ul>
-										<!-- 其他 -->
-										<ul>
-											<li>
-												<textarea class="form-control" rows="3"></textarea>
-											</li>
-										</ul>
-									</li>
-								</ul>
+													</div>
+												</li>
+											</ul>
+										</li>
+										<p class="text-center text-red">此处会有一段解释说明</p>
+									</ul>
+							</li>
+							</ul>
 
-								<!-- 明信片 -->
-								<ul>
-									<li>
-										<h2 class="text-center">明信片</h2>
-										<select class="form-control form-class-b-oveLevel">
-											<option value="0">请选择明信片类型</option>
-											<option value="1" class="printing-notebook">Pvc</option>
-											<option value="2" class="printing-periphery">纸质</option>
-										</select>
-										<!-- Pvc -->
-										<ul>
-											<li>
-												<button type="button" class="btn btn-default tooltip-style" data-toggle="tooltip" data-placement="top" title="提示框文字后期拿到文案再修改">
-													Pvc
-												</button>
-												<div class="flex-layout">
-													<p class="col-xs-3">形状：</p>
-													<label class="col-xs-9 form-inline">
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择形状类型</option>
-															<option value="1" class="printing-notebook">尖角</option>
-															<option value="2" class="printing-periphery">圆角</option>
-														</select>
+							<!-- 立牌 -->
+							<ul>
+								<li>
+									<h2 class="text-center">立牌</h2>
+									<select class="form-control form-class-b-oveLevel">
+										<option value="0">请选择立牌类型</option>
+										<option value="1" class="printing-notebook">普通立牌</option>
+										<option value="2" class="printing-periphery">多层场景立牌</option>
+										<option value="3" class="printing-periphery">挂立两用立牌</option>
+										<option value="4" class="printing-periphery">其他</option>
+									</select>
+									<!-- 普通立牌 -->
+									<ul>
+										<li>
+											<h2 class="text-center">普通立牌</h2>
+											<div class="flex-layout">
+												<p class="col-xs-3">印刷：</p>
+												<label class="col-xs-9">
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择印刷种类</option>
+														<option value="1" class="printing-notebook">单面印刷（默认底座单面图案）</option>
+														<option value="1" class="printing-notebook">双面印刷（默认底座单面图案）</option>
+													</select>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">特殊工艺：</p>
+												<label class="col-xs-9">
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫金
 													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">特殊工艺：</p>
-													<label class="col-xs-9 form-inline">
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫银
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 镭射银
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 部分透明（默认表面覆膜）
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 无工艺（默认表面覆膜）
-														</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 镶钻
 													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">尺寸：</p>
-													<label class="col-xs-9 form-inline">
-														<span>自定义尺寸:</span>
-														<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
-														<span>*</span>
-														<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫银
 													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">款式：</p>
-													<label class="col-xs-9 form-inline">
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 镭射银
 													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">数量：</p>
-													<label class="col-xs-9 form-inline">
-														每款
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量500个）
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 层次印刷
 													</label>
-												</div>
-											</li>
-											<p class="text-center text-red">如需其他特殊工艺请在交表后咨询客服</p>
-										</ul>
-										<!-- 纸质 -->
-										<ul>
-											<li>
-												<button type="button" class="btn btn-default tooltip-style" data-toggle="tooltip" data-placement="top" title="提示框文字后期拿到文案再修改">
-													纸质
-												</button>
-												<div class="flex-layout">
-													<p class="col-xs-3">纸质：</p>
-													<label class="col-xs-9">
-														<select class="form-control form-class-b-oveLevel select-other">
-															<option value="0">请选择纸质类型</option>
-															<option value="1" class="printing-notebook">冰白珠光</option>
-															<option value="2" class="printing-periphery">英国白卡</option>
-															<option value="3" class="printing-periphery">铜版纸</option>
-															<option value="4" class="printing-periphery">亚粉纸</option>
-															<option value="5" class="printing-periphery">星河纸</option>
-															<option value="6" class="printing-periphery">超感纸</option>
-															<option value="7" class="printing-periphery">高阶映画</option>
-															<option value="8" class="printing-periphery" data-name="其他">其他</option>
-														</select>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 部分透明
 													</label>
-													<input type="text" class="form-control input-other" placeholder="请选择纸质类型">
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">形状：</p>
-													<label class="col-xs-9 form-inline">
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择形状类型</option>
-															<option value="1" class="printing-notebook">尖角</option>
-															<option value="2" class="printing-periphery">圆角</option>
-															<option value="3" class="printing-periphery">非矩形（异形模切）</option>
-														</select>
+													<p class="text-red">如需其他特殊工艺请在交表后咨询客服</p>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">尺寸：</p>
+												<label class="col-xs-9 form-inline">
+													<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
+													<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">款式：</p>
+												<label class="col-xs-9 form-inline">
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">数量：</p>
+												<label class="col-xs-9 form-inline">
+													每款
+													<input type="number" class="form-control must-write most-200" id="exampleInputName2" placeholder="款式">个（单款起订数量200个）
+												</label>
+											</div>
+											<p class="must-red">此选项为必填，且数量不能低于200</p>
+										</li>
+									</ul>
+									<!-- 多层场景立牌 -->
+									<ul>
+										<li>
+											<h2 class="text-center">多层场景立牌</h2>
+											<div class="flex-layout">
+												<p class="col-xs-3">印刷：</p>
+												<label class="col-xs-9">
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择印刷种类</option>
+														<option value="1" class="printing-notebook">单面印刷（默认底座单面图案）</option>
+														<option value="1" class="printing-notebook">双面印刷（默认底座单面图案）</option>
+													</select>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">特殊工艺：</p>
+												<label class="col-xs-9">
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫金
 													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">覆膜：</p>
-													<label class="col-xs-9 form-inline">
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择覆膜类型</option>
-															<option value="1" class="printing-notebook">亮膜</option>
-															<option value="2" class="printing-periphery">亚膜</option>
-															<option value="2" class="printing-periphery">触感膜</option>
-															<option value="2" class="printing-periphery">不覆膜</option>
-														</select>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 镶钻
 													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">特殊工艺：</p>
-													<label class="col-xs-9 form-inline">
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫亮金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫哑金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫蓝金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫黑金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫紫金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫银
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫金烫银组合
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> UV
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 镭射
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 压痕
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 感温变色
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 刷金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 刷银
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 磨砂UV
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 异形模切
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 其他
-														</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫银
 													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">尺寸：</p>
-													<label class="col-xs-9 form-inline">
-														<span>自定义尺寸:</span>
-														<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
-														<span>*</span>
-														<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 镭射银
 													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">款式：</p>
-													<label class="col-xs-9 form-inline">
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 层次印刷
 													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">数量：</p>
-													<label class="col-xs-9 form-inline">
-														每款
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 部分透明
 													</label>
-												</div>
-											</li>
-										</ul>
-									</li>
+													<p class="text-red">如需其他特殊工艺请在交表后咨询客服</p>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">尺寸：</p>
+												<label class="col-xs-9 form-inline">
+													<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
+													<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">款式：</p>
+												<label class="col-xs-9 form-inline">
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">数量：</p>
+												<label class="col-xs-9 form-inline">
+													每款
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
+												</label>
+											</div>
+										</li>
+									</ul>
+									<!-- 挂立两用立牌 -->
+									<ul>
+										<li>
+											<h2 class="text-center">挂立两用立牌</h2>
+											<div class="flex-layout">
+												<p class="col-xs-3">印刷：</p>
+												<label class="col-xs-9">
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择印刷种类</option>
+														<option value="1" class="printing-notebook">单面印刷（默认底座单面图案）</option>
+														<option value="1" class="printing-notebook">双面印刷（默认底座单面图案）</option>
+													</select>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">特殊工艺：</p>
+												<label class="col-xs-9">
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 镶钻
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫银
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 镭射银
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 层次印刷
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 部分透明
+													</label>
+													<p class="text-red">如需其他特殊工艺请在交表后咨询客服</p>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">配件：</p>
+												<label class="col-xs-9">
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择配件种类</option>
+														<option value="1" class="printing-notebook">手机绳</option>
+														<option value="1" class="printing-notebook">银色D字扣</option>
+														<option value="1" class="printing-notebook">银色钥匙圈</option>
+														<option value="1" class="printing-notebook">银色珠链</option>
+														<option value="1" class="printing-notebook">银色龙虾扣</option>
+														<option value="1" class="printing-notebook">星星型配件</option>
+														<option value="1" class="printing-notebook">心形配件</option>
+														<option value="1" class="printing-notebook">金色珠链</option>
+														<option value="1" class="printing-notebook">金色C字扣钥匙圈双用</option>
+														<option value="1" class="printing-notebook">金色D字扣钥匙圈双用</option>
+													</select>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">尺寸：</p>
+												<label class="col-xs-9 form-inline">
+													<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
+													<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">款式：</p>
+												<label class="col-xs-9 form-inline">
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">数量：</p>
+												<label class="col-xs-9 form-inline">
+													每款
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
+												</label>
+											</div>
+										</li>
+									</ul>
+									<!-- 其他 -->
+									<ul>
+										<li>
+											<textarea class="form-control" rows="3"></textarea>
+										</li>
+									</ul>
+								</li>
+							</ul>
+
+							<!-- 明信片 -->
+							<ul>
+								<li>
+									<h2 class="text-center">明信片</h2>
+									<select class="form-control form-class-b-oveLevel">
+										<option value="0">请选择明信片类型</option>
+										<option value="1" class="printing-notebook">Pvc</option>
+										<option value="2" class="printing-periphery">纸质</option>
+									</select>
+									<!-- Pvc -->
+									<ul>
+										<li>
+											<button type="button" class="btn btn-default tooltip-style" data-toggle="tooltip" data-placement="top" title="提示框文字后期拿到文案再修改">
+												Pvc
+											</button>
+											<div class="flex-layout">
+												<p class="col-xs-3">形状：</p>
+												<label class="col-xs-9 form-inline">
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择形状类型</option>
+														<option value="1" class="printing-notebook">尖角</option>
+														<option value="2" class="printing-periphery">圆角</option>
+													</select>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">特殊工艺：</p>
+												<label class="col-xs-9 form-inline">
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫银
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 镭射银
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 部分透明（默认表面覆膜）
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 无工艺（默认表面覆膜）
+													</label>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">尺寸：</p>
+												<label class="col-xs-9 form-inline">
+													<span>自定义尺寸:</span>
+													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
+													<span>*</span>
+													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">款式：</p>
+												<label class="col-xs-9 form-inline">
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">数量：</p>
+												<label class="col-xs-9 form-inline">
+													每款
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量500个）
+												</label>
+											</div>
+										</li>
+										<p class="text-center text-red">如需其他特殊工艺请在交表后咨询客服</p>
+									</ul>
+									<!-- 纸质 -->
+									<ul>
+										<li>
+											<button type="button" class="btn btn-default tooltip-style" data-toggle="tooltip" data-placement="top" title="提示框文字后期拿到文案再修改">
+												纸质
+											</button>
+											<div class="flex-layout">
+												<p class="col-xs-3">纸质：</p>
+												<label class="col-xs-9">
+													<select class="form-control form-class-b-oveLevel select-other">
+														<option value="0">请选择纸质类型</option>
+														<option value="1" class="printing-notebook">冰白珠光</option>
+														<option value="2" class="printing-periphery">英国白卡</option>
+														<option value="3" class="printing-periphery">铜版纸</option>
+														<option value="4" class="printing-periphery">亚粉纸</option>
+														<option value="5" class="printing-periphery">星河纸</option>
+														<option value="6" class="printing-periphery">超感纸</option>
+														<option value="7" class="printing-periphery">高阶映画</option>
+														<option value="8" class="printing-periphery" data-name="其他">其他</option>
+													</select>
+												</label>
+												<input type="text" class="form-control input-other" placeholder="请选择纸质类型">
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">形状：</p>
+												<label class="col-xs-9 form-inline">
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择形状类型</option>
+														<option value="1" class="printing-notebook">尖角</option>
+														<option value="2" class="printing-periphery">圆角</option>
+														<option value="3" class="printing-periphery">非矩形（异形模切）</option>
+													</select>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">覆膜：</p>
+												<label class="col-xs-9 form-inline">
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择覆膜类型</option>
+														<option value="1" class="printing-notebook">亮膜</option>
+														<option value="2" class="printing-periphery">亚膜</option>
+														<option value="2" class="printing-periphery">触感膜</option>
+														<option value="2" class="printing-periphery">不覆膜</option>
+													</select>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">特殊工艺：</p>
+												<label class="col-xs-9 form-inline">
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫亮金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫哑金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫蓝金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫黑金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫紫金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫银
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫金烫银组合
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> UV
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 镭射
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 压痕
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 感温变色
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 刷金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 刷银
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 磨砂UV
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 异形模切
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 其他
+													</label>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">尺寸：</p>
+												<label class="col-xs-9 form-inline">
+													<span>自定义尺寸:</span>
+													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
+													<span>*</span>
+													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">款式：</p>
+												<label class="col-xs-9 form-inline">
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">数量：</p>
+												<label class="col-xs-9 form-inline">
+													每款
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
+												</label>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<p class="text-center text-red">此处会有一段解释性的文字</p>
+							</ul>
+
+							<!-- 海报 -->
+							<ul>
+								<li>
+									<button type="button" class="btn btn-default tooltip-style" data-toggle="tooltip" data-placement="top" title="提示框文字后期拿到文案再修改">
+										海报
+									</button>
+									<select class="form-control form-class-b-oveLevel">
+										<option value="0">请选择海报类型</option>
+										<option value="1" class="printing-notebook">Pvc</option>
+										<option value="2" class="printing-periphery">纸质</option>
+									</select>
+									<!-- Pvc -->
+									<ul>
+										<li>
+											<button type="button" class="btn btn-default tooltip-style" data-toggle="tooltip" data-placement="top" title="提示框文字后期拿到文案再修改">
+												Pvc
+											</button>
+											<div class="flex-layout">
+												<p class="col-xs-3">形状：</p>
+												<label class="col-xs-9 form-inline">
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择形状类型</option>
+														<option value="1" class="printing-notebook">尖角</option>
+														<option value="2" class="printing-periphery">圆角</option>
+													</select>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">特殊工艺：</p>
+												<label class="col-xs-9 form-inline">
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫银
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 镭射银
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 部分透明（默认表面覆膜）
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 无工艺（默认表面覆膜）
+													</label>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">尺寸：</p>
+												<label class="col-xs-9 form-inline">
+													<span>自定义尺寸:</span>
+													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
+													<span>*</span>
+													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">款式：</p>
+												<label class="col-xs-9 form-inline">
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">数量：</p>
+												<label class="col-xs-9 form-inline">
+													每款
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
+												</label>
+											</div>
+										</li>
+										<p class="text-center text-red">如需其他特殊工艺请在交表后咨询客服</p>
+									</ul>
+									<!-- 纸质 -->
+									<ul>
+										<li>
+											<button type="button" class="btn btn-default tooltip-style" data-toggle="tooltip" data-placement="top" title="提示框文字后期拿到文案再修改">
+												纸质
+											</button>
+											<div class="flex-layout">
+												<p class="col-xs-3">纸质：</p>
+												<label class="col-xs-9">
+													<select class="form-control form-class-b-oveLevel select-other">
+														<option value="0">请选择纸质类型</option>
+														<option value="1" class="printing-notebook">冰白珠光</option>
+														<option value="2" class="printing-periphery">英国白卡</option>
+														<option value="3" class="printing-periphery">铜版纸</option>
+														<option value="4" class="printing-periphery">亚粉纸</option>
+														<option value="5" class="printing-periphery">星河纸</option>
+														<option value="6" class="printing-periphery">超感纸</option>
+														<option value="7" class="printing-periphery">高阶映画</option>
+														<option value="8" class="printing-periphery" data-name="其他">其他</option>
+													</select>
+												</label>
+												<input type="text" class="form-control input-other" placeholder="请选择纸质类型">
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">形状：</p>
+												<label class="col-xs-9 form-inline">
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择形状类型</option>
+														<option value="1" class="printing-notebook">尖角</option>
+														<option value="2" class="printing-periphery">圆角</option>
+														<option value="3" class="printing-periphery">非矩形（异形模切）</option>
+													</select>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">覆膜：</p>
+												<label class="col-xs-9 form-inline">
+													<select class="form-control form-class-b-oveLevel">
+														<option value="0">请选择覆膜类型</option>
+														<option value="1" class="printing-notebook">亮膜</option>
+														<option value="2" class="printing-periphery">亚膜</option>
+														<option value="2" class="printing-periphery">触感膜</option>
+														<option value="2" class="printing-periphery">不覆膜</option>
+													</select>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">特殊工艺：</p>
+												<label class="col-xs-9 form-inline">
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫亮金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫哑金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫蓝金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫黑金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫紫金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫银
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫金烫银组合
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> UV
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 镭射
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 压痕
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox2" value="option2"> 感温变色
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox1" value="option1"> 刷金
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 刷银
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 磨砂UV
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 异形模切
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" id="inlineCheckbox3" value="option3"> 其他
+													</label>
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">尺寸：</p>
+												<label class="col-xs-9 form-inline">
+													<span>自定义尺寸:</span>
+													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
+													<span>*</span>
+													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">款式：</p>
+												<label class="col-xs-9 form-inline">
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">数量：</p>
+												<label class="col-xs-9 form-inline">
+													每款
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
+												</label>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<p class="text-center text-red">此处会有一段解释性的文字</p>
+							</ul>
+
+							<!-- 徽章 -->
+							<ul>
+								<li>
+									<div class="flex-layout choose-checkbox-div">
+										<p class="col-xs-3">请选择徽章类型：</p>
+										<label class="col-xs-9 form-inline">
+											<label class="radio-inline">
+												<input type="radio" class="radio-checkbox-ul" name="inlineRadioOptions" id="inlineRadio1" value="0"> 马口铁底
+											</label>
+											<label class="radio-inline">
+												<input type="radio" class="radio-checkbox-ul" name="inlineRadioOptions" id="inlineRadio2" value="1"> 塑料底
+											</label>
+										</label>
+									</div>
+									<!-- 马口铁底 -->
+									<ul>
+										<li>
+											<h2 class="text-center">马口铁底</h2>
+											<select class="form-control form-class-b-oveLevel">
+												<option value="0">请选择马口铁底类型</option>
+												<option value="1" class="printing-notebook">圆形</option>
+												<option value="2" class="printing-periphery">方形</option>
+												<option value="3" class="printing-periphery">心形</option>
+												<option value="4" class="printing-periphery">长方形</option>
+											</select>
+											<!-- 圆形 -->
+											<ul>
+												<li>
+													<h2 class="text-center">圆形</h2>
+													<div class="flex-layout">
+														<p class="col-xs-3">尺寸：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">请选择圆形类型</option>
+																<option value="1" class="printing-notebook">2.5</option>
+																<option value="2" class="printing-periphery">3.2</option>
+																<option value="2" class="printing-periphery">3.7</option>
+																<option value="2" class="printing-periphery">4.4</option>
+																<option value="2" class="printing-periphery">5.8</option>
+																<option value="2" class="printing-periphery">7.5</option>
+																<option value="2" class="printing-periphery">10</option>
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">覆膜：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">覆膜</option>
+																<option value="1" class="printing-notebook">星幻膜</option>
+																<option value="2" class="printing-periphery">亚膜</option>
+																<option value="2" class="printing-periphery">亮膜</option>
+																<option value="2" class="printing-periphery">皮纹</option>
+																<option value="2" class="printing-periphery">布纹</option>
+																<option value="2" class="printing-periphery">磨砂</option>
+																<option value="2" class="printing-periphery">镭射星星</option>
+																<option value="2" class="printing-periphery">镭射闪点</option>
+																<option value="2" class="printing-periphery">镭射爱心</option>
+																<option value="2" class="printing-periphery">镭射蝴蝶</option>
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">款式：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">数量：</p>
+														<label class="col-xs-9 form-inline">
+															每款
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
+														</label>
+													</div>
+												</li>
+											</ul>
+											<!-- 方形 -->
+											<ul>
+												<li>
+													<h2 class="text-center">方形</h2>
+													<div class="flex-layout">
+														<p class="col-xs-3">尺寸：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">请选择方形类型</option>
+																<option value="1" class="printing-notebook">5cm</option>
+																<!-- <option value="2" class="printing-periphery">3.2</option> -->
+																<!-- <option value="2" class="printing-periphery">3.7</option> -->
+																<!-- <option value="2" class="printing-periphery">4.4</option> -->
+																<!-- <option value="2" class="printing-periphery">5.8</option> -->
+																<!-- <option value="2" class="printing-periphery">7.5</option> -->
+																<!-- <option value="2" class="printing-periphery">10</option> -->
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">覆膜：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">覆膜</option>
+																<option value="1" class="printing-notebook">星幻膜</option>
+																<option value="2" class="printing-periphery">亚膜</option>
+																<option value="2" class="printing-periphery">亮膜</option>
+																<option value="2" class="printing-periphery">皮纹</option>
+																<option value="2" class="printing-periphery">布纹</option>
+																<option value="2" class="printing-periphery">磨砂</option>
+																<option value="2" class="printing-periphery">镭射星星</option>
+																<option value="2" class="printing-periphery">镭射闪点</option>
+																<option value="2" class="printing-periphery">镭射爱心</option>
+																<option value="2" class="printing-periphery">镭射蝴蝶</option>
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">款式：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">数量：</p>
+														<label class="col-xs-9 form-inline">
+															每款
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
+														</label>
+													</div>
+												</li>
+											</ul>
+											<!-- 心形 -->
+											<ul>
+												<li>
+													<h2 class="text-center">心形</h2>
+													<div class="flex-layout">
+														<p class="col-xs-3">尺寸：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">请选择心形类型</option>
+																<option value="1" class="printing-notebook">3.8cm*4.2cm</option>
+																<!-- <option value="2" class="printing-periphery">3.2</option> -->
+																<!-- <option value="2" class="printing-periphery">3.7</option> -->
+																<!-- <option value="2" class="printing-periphery">4.4</option> -->
+																<!-- <option value="2" class="printing-periphery">5.8</option> -->
+																<!-- <option value="2" class="printing-periphery">7.5</option> -->
+																<!-- <option value="2" class="printing-periphery">10</option> -->
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">覆膜：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">覆膜</option>
+																<option value="1" class="printing-notebook">星幻膜</option>
+																<option value="2" class="printing-periphery">亚膜</option>
+																<option value="2" class="printing-periphery">亮膜</option>
+																<option value="2" class="printing-periphery">皮纹</option>
+																<option value="2" class="printing-periphery">布纹</option>
+																<option value="2" class="printing-periphery">磨砂</option>
+																<option value="2" class="printing-periphery">镭射星星</option>
+																<option value="2" class="printing-periphery">镭射闪点</option>
+																<option value="2" class="printing-periphery">镭射爱心</option>
+																<option value="2" class="printing-periphery">镭射蝴蝶</option>
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">款式：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">数量：</p>
+														<label class="col-xs-9 form-inline">
+															每款
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
+														</label>
+													</div>
+												</li>
+											</ul>
+											<!-- 长方形 -->
+											<ul>
+												<li>
+													<h2 class="text-center">长方形</h2>
+													<div class="flex-layout">
+														<p class="col-xs-3">尺寸：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">请选择长方形类型</option>
+																<option value="1" class="printing-notebook">2.cm*6.8cm</option>
+																<!-- <option value="2" class="printing-periphery">3.2</option> -->
+																<!-- <option value="2" class="printing-periphery">3.7</option> -->
+																<!-- <option value="2" class="printing-periphery">4.4</option> -->
+																<!-- <option value="2" class="printing-periphery">5.8</option> -->
+																<!-- <option value="2" class="printing-periphery">7.5</option> -->
+																<!-- <option value="2" class="printing-periphery">10</option> -->
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">覆膜：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">覆膜</option>
+																<option value="1" class="printing-notebook">亮膜</option>
+																<!-- <option value="2" class="printing-periphery">亚膜</option>
+																	<option value="2" class="printing-periphery">亮膜</option>
+																	<option value="2" class="printing-periphery">皮纹</option>
+																	<option value="2" class="printing-periphery">布纹</option>
+																	<option value="2" class="printing-periphery">磨砂</option>
+																	<option value="2" class="printing-periphery">镭射星星</option>
+																	<option value="2" class="printing-periphery">镭射闪点</option>
+																	<option value="2" class="printing-periphery">镭射爱心</option>
+																	<option value="2" class="printing-periphery">镭射蝴蝶</option> -->
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">款式：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">数量：</p>
+														<label class="col-xs-9 form-inline">
+															每款
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
+														</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+
+									<!-- 塑料底选项弹出 -->
+									<ul>
+										<li>
+											<h2 class="text-center">塑料底</h2>
+											<select class="form-control">
+												<option value="0">请选择塑料底类型</option>
+												<option value="1" class="printing-notebook">圆形</option>
+												<option value="2" class="printing-periphery">方形</option>
+												<option value="3" class="printing-periphery">心形</option>
+												<option value="4" class="printing-periphery">长方形</option>
+											</select>
+											<!-- 圆形 -->
+											<ul>
+												<li>
+													<h2 class="text-center">圆形</h2>
+													<div class="flex-layout">
+														<p class="col-xs-3">尺寸：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">请选择圆形类型</option>
+																<option value="1" class="printing-notebook">2.5</option>
+																<option value="2" class="printing-periphery">3.2</option>
+																<option value="2" class="printing-periphery">3.7</option>
+																<option value="2" class="printing-periphery">4.4</option>
+																<option value="2" class="printing-periphery">5.8</option>
+																<option value="2" class="printing-periphery">7.5</option>
+																<option value="2" class="printing-periphery">10</option>
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">覆膜：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">覆膜</option>
+																<option value="1" class="printing-notebook">星幻膜</option>
+																<option value="2" class="printing-periphery">亚膜</option>
+																<option value="2" class="printing-periphery">亮膜</option>
+																<option value="2" class="printing-periphery">皮纹</option>
+																<option value="2" class="printing-periphery">布纹</option>
+																<option value="2" class="printing-periphery">磨砂</option>
+																<option value="2" class="printing-periphery">镭射星星</option>
+																<option value="2" class="printing-periphery">镭射闪点</option>
+																<option value="2" class="printing-periphery">镭射爱心</option>
+																<option value="2" class="printing-periphery">镭射蝴蝶</option>
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">款式：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">数量：</p>
+														<label class="col-xs-9 form-inline">
+															每款
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
+														</label>
+													</div>
+												</li>
+											</ul>
+											<!-- 方形 -->
+											<ul>
+												<li>
+													<h2 class="text-center">方形</h2>
+													<div class="flex-layout">
+														<p class="col-xs-3">尺寸：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">请选择方形类型</option>
+																<option value="1" class="printing-notebook">5cm</option>
+																<!-- <option value="2" class="printing-periphery">3.2</option> -->
+																<!-- <option value="2" class="printing-periphery">3.7</option> -->
+																<!-- <option value="2" class="printing-periphery">4.4</option> -->
+																<!-- <option value="2" class="printing-periphery">5.8</option> -->
+																<!-- <option value="2" class="printing-periphery">7.5</option> -->
+																<!-- <option value="2" class="printing-periphery">10</option> -->
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">覆膜：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">覆膜</option>
+																<option value="1" class="printing-notebook">星幻膜</option>
+																<option value="2" class="printing-periphery">亚膜</option>
+																<option value="2" class="printing-periphery">亮膜</option>
+																<option value="2" class="printing-periphery">皮纹</option>
+																<option value="2" class="printing-periphery">布纹</option>
+																<option value="2" class="printing-periphery">磨砂</option>
+																<option value="2" class="printing-periphery">镭射星星</option>
+																<option value="2" class="printing-periphery">镭射闪点</option>
+																<option value="2" class="printing-periphery">镭射爱心</option>
+																<option value="2" class="printing-periphery">镭射蝴蝶</option>
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">款式：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">数量：</p>
+														<label class="col-xs-9 form-inline">
+															每款
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
+														</label>
+													</div>
+												</li>
+											</ul>
+											<!-- 心形 -->
+											<ul>
+												<li>
+													<h2 class="text-center">心形</h2>
+													<div class="flex-layout">
+														<p class="col-xs-3">尺寸：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">请选择心形类型</option>
+																<option value="1" class="printing-notebook">3.8cm*4.2cm</option>
+																<option value="2" class="printing-periphery">5.7cm*5.2cm</option>
+																<!-- <option value="2" class="printing-periphery">3.7</option> -->
+																<!-- <option value="2" class="printing-periphery">4.4</option> -->
+																<!-- <option value="2" class="printing-periphery">5.8</option> -->
+																<!-- <option value="2" class="printing-periphery">7.5</option> -->
+																<!-- <option value="2" class="printing-periphery">10</option> -->
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">覆膜：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">覆膜</option>
+																<option value="1" class="printing-notebook">亮膜</option>
+																<!-- <option value="2" class="printing-periphery">亚膜</option>
+																	<option value="2" class="printing-periphery">亮膜</option>
+																	<option value="2" class="printing-periphery">皮纹</option>
+																	<option value="2" class="printing-periphery">布纹</option>
+																	<option value="2" class="printing-periphery">磨砂</option>
+																	<option value="2" class="printing-periphery">镭射星星</option>
+																	<option value="2" class="printing-periphery">镭射闪点</option>
+																	<option value="2" class="printing-periphery">镭射爱心</option>
+																	<option value="2" class="printing-periphery">镭射蝴蝶</option> -->
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">款式：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">数量：</p>
+														<label class="col-xs-9 form-inline">
+															每款
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
+														</label>
+													</div>
+												</li>
+											</ul>
+											<!-- 长方形 -->
+											<ul>
+												<li>
+													<h2 class="text-center">长方形</h2>
+													<div class="flex-layout">
+														<p class="col-xs-3">尺寸：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">请选择长方形类型</option>
+																<option value="1" class="printing-notebook">2.3cm*4.2cm</option>
+																<option value="2" class="printing-periphery">5.7cm*5.2cm</option>
+																<!-- <option value="2" class="printing-periphery">3.7</option> -->
+																<!-- <option value="2" class="printing-periphery">4.4</option> -->
+																<!-- <option value="2" class="printing-periphery">5.8</option> -->
+																<!-- <option value="2" class="printing-periphery">7.5</option> -->
+																<!-- <option value="2" class="printing-periphery">10</option> -->
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">覆膜：</p>
+														<label class="col-xs-9 form-inline">
+															<select class="form-control form-class-b-oveLevel">
+																<option value="0">覆膜</option>
+																<option value="1" class="printing-notebook">亮膜</option>
+																<!-- <option value="2" class="printing-periphery">亚膜</option>
+																	<option value="2" class="printing-periphery">亮膜</option>
+																	<option value="2" class="printing-periphery">皮纹</option>
+																	<option value="2" class="printing-periphery">布纹</option>
+																	<option value="2" class="printing-periphery">磨砂</option>
+																	<option value="2" class="printing-periphery">镭射星星</option>
+																	<option value="2" class="printing-periphery">镭射闪点</option>
+																	<option value="2" class="printing-periphery">镭射爱心</option>
+																	<option value="2" class="printing-periphery">镭射蝴蝶</option> -->
+															</select>
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">款式：</p>
+														<label class="col-xs-9 form-inline">
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+														</label>
+													</div>
+													<div class="flex-layout">
+														<p class="col-xs-3">数量：</p>
+														<label class="col-xs-9 form-inline">
+															每款
+															<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
+														</label>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
 									<p class="text-center text-red">此处会有一段解释性的文字</p>
-								</ul>
+								</li>
+							</ul>
 
-								<!-- 海报 -->
-								<ul>
-									<li>
-										<button type="button" class="btn btn-default tooltip-style" data-toggle="tooltip" data-placement="top" title="提示框文字后期拿到文案再修改">
-													海报
-												</button>
-										<select class="form-control form-class-b-oveLevel">
-											<option value="0">请选择海报类型</option>
-											<option value="1" class="printing-notebook">Pvc</option>
-											<option value="2" class="printing-periphery">纸质</option>
-										</select>
-										<!-- Pvc -->
-										<ul>
-											<li>
-												<button type="button" class="btn btn-default tooltip-style" data-toggle="tooltip" data-placement="top" title="提示框文字后期拿到文案再修改">
-													Pvc
-												</button>
-												<div class="flex-layout">
-													<p class="col-xs-3">形状：</p>
-													<label class="col-xs-9 form-inline">
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择形状类型</option>
-															<option value="1" class="printing-notebook">尖角</option>
-															<option value="2" class="printing-periphery">圆角</option>
-														</select>
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">特殊工艺：</p>
-													<label class="col-xs-9 form-inline">
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫银
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 镭射银
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 部分透明（默认表面覆膜）
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 无工艺（默认表面覆膜）
-														</label>
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">尺寸：</p>
-													<label class="col-xs-9 form-inline">
-														<span>自定义尺寸:</span>
-														<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
-														<span>*</span>
-														<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">款式：</p>
-													<label class="col-xs-9 form-inline">
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">数量：</p>
-													<label class="col-xs-9 form-inline">
-														每款
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
-													</label>
-												</div>
-											</li>
-											<p class="text-center text-red">如需其他特殊工艺请在交表后咨询客服</p>
-										</ul>
-										<!-- 纸质 -->
-										<ul>
-											<li>
-												<button type="button" class="btn btn-default tooltip-style" data-toggle="tooltip" data-placement="top" title="提示框文字后期拿到文案再修改">
-													纸质
-												</button>
-												<div class="flex-layout">
-													<p class="col-xs-3">纸质：</p>
-													<label class="col-xs-9">
-														<select class="form-control form-class-b-oveLevel select-other">
-															<option value="0">请选择纸质类型</option>
-															<option value="1" class="printing-notebook">冰白珠光</option>
-															<option value="2" class="printing-periphery">英国白卡</option>
-															<option value="3" class="printing-periphery">铜版纸</option>
-															<option value="4" class="printing-periphery">亚粉纸</option>
-															<option value="5" class="printing-periphery">星河纸</option>
-															<option value="6" class="printing-periphery">超感纸</option>
-															<option value="7" class="printing-periphery">高阶映画</option>
-															<option value="8" class="printing-periphery" data-name="其他">其他</option>
-														</select>
-													</label>
-													<input type="text" class="form-control input-other" placeholder="请选择纸质类型">
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">形状：</p>
-													<label class="col-xs-9 form-inline">
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择形状类型</option>
-															<option value="1" class="printing-notebook">尖角</option>
-															<option value="2" class="printing-periphery">圆角</option>
-															<option value="3" class="printing-periphery">非矩形（异形模切）</option>
-														</select>
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">覆膜：</p>
-													<label class="col-xs-9 form-inline">
-														<select class="form-control form-class-b-oveLevel">
-															<option value="0">请选择覆膜类型</option>
-															<option value="1" class="printing-notebook">亮膜</option>
-															<option value="2" class="printing-periphery">亚膜</option>
-															<option value="2" class="printing-periphery">触感膜</option>
-															<option value="2" class="printing-periphery">不覆膜</option>
-														</select>
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">特殊工艺：</p>
-													<label class="col-xs-9 form-inline">
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫亮金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫哑金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫蓝金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫黑金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 烫紫金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫银
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫金烫银组合
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> UV
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 镭射
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 压痕
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 感温变色
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 刷金
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 刷银
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 磨砂UV
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 异形模切
-														</label>
-														<label class="checkbox-inline">
-															<input type="checkbox" id="inlineCheckbox3" value="option3"> 其他
-														</label>
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">尺寸：</p>
-													<label class="col-xs-9 form-inline">
-														<span>自定义尺寸:</span>
-														<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
-														<span>*</span>
-														<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">款式：</p>
-													<label class="col-xs-9 form-inline">
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">数量：</p>
-													<label class="col-xs-9 form-inline">
-														每款
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
-													</label>
-												</div>
-											</li>
-										</ul>
-									</li>
-									<p class="text-center text-red">此处会有一段解释性的文字</p>
-								</ul>
-
-								<!-- 徽章 -->
-								<ul>
-									<li>
-										<div class="flex-layout choose-checkbox-div">
-											<p class="col-xs-3">请选择徽章类型：</p>
-											<label class="col-xs-9 form-inline">
-												<label class="radio-inline">
-													<input type="radio" class="radio-checkbox-ul" name="inlineRadioOptions" id="inlineRadio1" value="0"> 马口铁底
-												</label>
-												<label class="radio-inline">
-													<input type="radio" class="radio-checkbox-ul" name="inlineRadioOptions" id="inlineRadio2" value="1"> 塑料底
-												</label>
-											</label>
-										</div>
-										<!-- 马口铁底 -->
-										<ul>
-											<li>
-												<h2 class="text-center">马口铁底</h2>
-												<select class="form-control form-class-b-oveLevel">
-													<option value="0">请选择马口铁底类型</option>
-													<option value="1" class="printing-notebook">圆形</option>
-													<option value="2" class="printing-periphery">方形</option>
-													<option value="3" class="printing-periphery">心形</option>
-													<option value="4" class="printing-periphery">长方形</option>
-												</select>
-												<!-- 圆形 -->
-												<ul>
-													<li>
-														<h2 class="text-center">圆形</h2>
-														<div class="flex-layout">
-															<p class="col-xs-3">尺寸：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">请选择圆形类型</option>
-																	<option value="1" class="printing-notebook">2.5</option>
-																	<option value="2" class="printing-periphery">3.2</option>
-																	<option value="2" class="printing-periphery">3.7</option>
-																	<option value="2" class="printing-periphery">4.4</option>
-																	<option value="2" class="printing-periphery">5.8</option>
-																	<option value="2" class="printing-periphery">7.5</option>
-																	<option value="2" class="printing-periphery">10</option>
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">覆膜：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">覆膜</option>
-																	<option value="1" class="printing-notebook">星幻膜</option>
-																	<option value="2" class="printing-periphery">亚膜</option>
-																	<option value="2" class="printing-periphery">亮膜</option>
-																	<option value="2" class="printing-periphery">皮纹</option>
-																	<option value="2" class="printing-periphery">布纹</option>
-																	<option value="2" class="printing-periphery">磨砂</option>
-																	<option value="2" class="printing-periphery">镭射星星</option>
-																	<option value="2" class="printing-periphery">镭射闪点</option>
-																	<option value="2" class="printing-periphery">镭射爱心</option>
-																	<option value="2" class="printing-periphery">镭射蝴蝶</option>
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">款式：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">数量：</p>
-															<label class="col-xs-9 form-inline">
-																每款
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
-															</label>
-														</div>
-													</li>
-												</ul>
-												<!-- 方形 -->
-												<ul>
-													<li>
-														<h2 class="text-center">方形</h2>
-														<div class="flex-layout">
-															<p class="col-xs-3">尺寸：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">请选择方形类型</option>
-																	<option value="1" class="printing-notebook">5cm</option>
-																	<!-- <option value="2" class="printing-periphery">3.2</option> -->
-																	<!-- <option value="2" class="printing-periphery">3.7</option> -->
-																	<!-- <option value="2" class="printing-periphery">4.4</option> -->
-																	<!-- <option value="2" class="printing-periphery">5.8</option> -->
-																	<!-- <option value="2" class="printing-periphery">7.5</option> -->
-																	<!-- <option value="2" class="printing-periphery">10</option> -->
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">覆膜：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">覆膜</option>
-																	<option value="1" class="printing-notebook">星幻膜</option>
-																	<option value="2" class="printing-periphery">亚膜</option>
-																	<option value="2" class="printing-periphery">亮膜</option>
-																	<option value="2" class="printing-periphery">皮纹</option>
-																	<option value="2" class="printing-periphery">布纹</option>
-																	<option value="2" class="printing-periphery">磨砂</option>
-																	<option value="2" class="printing-periphery">镭射星星</option>
-																	<option value="2" class="printing-periphery">镭射闪点</option>
-																	<option value="2" class="printing-periphery">镭射爱心</option>
-																	<option value="2" class="printing-periphery">镭射蝴蝶</option>
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">款式：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">数量：</p>
-															<label class="col-xs-9 form-inline">
-																每款
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
-															</label>
-														</div>
-													</li>
-												</ul>
-												<!-- 心形 -->
-												<ul>
-													<li>
-														<h2 class="text-center">心形</h2>
-														<div class="flex-layout">
-															<p class="col-xs-3">尺寸：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">请选择心形类型</option>
-																	<option value="1" class="printing-notebook">3.8cm*4.2cm</option>
-																	<!-- <option value="2" class="printing-periphery">3.2</option> -->
-																	<!-- <option value="2" class="printing-periphery">3.7</option> -->
-																	<!-- <option value="2" class="printing-periphery">4.4</option> -->
-																	<!-- <option value="2" class="printing-periphery">5.8</option> -->
-																	<!-- <option value="2" class="printing-periphery">7.5</option> -->
-																	<!-- <option value="2" class="printing-periphery">10</option> -->
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">覆膜：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">覆膜</option>
-																	<option value="1" class="printing-notebook">星幻膜</option>
-																	<option value="2" class="printing-periphery">亚膜</option>
-																	<option value="2" class="printing-periphery">亮膜</option>
-																	<option value="2" class="printing-periphery">皮纹</option>
-																	<option value="2" class="printing-periphery">布纹</option>
-																	<option value="2" class="printing-periphery">磨砂</option>
-																	<option value="2" class="printing-periphery">镭射星星</option>
-																	<option value="2" class="printing-periphery">镭射闪点</option>
-																	<option value="2" class="printing-periphery">镭射爱心</option>
-																	<option value="2" class="printing-periphery">镭射蝴蝶</option>
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">款式：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">数量：</p>
-															<label class="col-xs-9 form-inline">
-																每款
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
-															</label>
-														</div>
-													</li>
-												</ul>
-												<!-- 长方形 -->
-												<ul>
-													<li>
-														<h2 class="text-center">长方形</h2>
-														<div class="flex-layout">
-															<p class="col-xs-3">尺寸：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">请选择长方形类型</option>
-																	<option value="1" class="printing-notebook">2.cm*6.8cm</option>
-																	<!-- <option value="2" class="printing-periphery">3.2</option> -->
-																	<!-- <option value="2" class="printing-periphery">3.7</option> -->
-																	<!-- <option value="2" class="printing-periphery">4.4</option> -->
-																	<!-- <option value="2" class="printing-periphery">5.8</option> -->
-																	<!-- <option value="2" class="printing-periphery">7.5</option> -->
-																	<!-- <option value="2" class="printing-periphery">10</option> -->
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">覆膜：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">覆膜</option>
-																	<option value="1" class="printing-notebook">亮膜</option>
-																	<!-- <option value="2" class="printing-periphery">亚膜</option>
-																	<option value="2" class="printing-periphery">亮膜</option>
-																	<option value="2" class="printing-periphery">皮纹</option>
-																	<option value="2" class="printing-periphery">布纹</option>
-																	<option value="2" class="printing-periphery">磨砂</option>
-																	<option value="2" class="printing-periphery">镭射星星</option>
-																	<option value="2" class="printing-periphery">镭射闪点</option>
-																	<option value="2" class="printing-periphery">镭射爱心</option>
-																	<option value="2" class="printing-periphery">镭射蝴蝶</option> -->
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">款式：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">数量：</p>
-															<label class="col-xs-9 form-inline">
-																每款
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
-															</label>
-														</div>
-													</li>
-												</ul>
-											</li>
-										</ul>
-
-										<!-- 塑料底选项弹出 -->
-										<ul>
-											<li>
-												<h2 class="text-center">塑料底</h2>
-												<select class="form-control">
-													<option value="0">请选择塑料底类型</option>
-													<option value="1" class="printing-notebook">圆形</option>
-													<option value="2" class="printing-periphery">方形</option>
-													<option value="3" class="printing-periphery">心形</option>
-													<option value="4" class="printing-periphery">长方形</option>
-												</select>
-												<!-- 圆形 -->
-												<ul>
-													<li>
-														<h2 class="text-center">圆形</h2>
-														<div class="flex-layout">
-															<p class="col-xs-3">尺寸：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">请选择圆形类型</option>
-																	<option value="1" class="printing-notebook">2.5</option>
-																	<option value="2" class="printing-periphery">3.2</option>
-																	<option value="2" class="printing-periphery">3.7</option>
-																	<option value="2" class="printing-periphery">4.4</option>
-																	<option value="2" class="printing-periphery">5.8</option>
-																	<option value="2" class="printing-periphery">7.5</option>
-																	<option value="2" class="printing-periphery">10</option>
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">覆膜：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">覆膜</option>
-																	<option value="1" class="printing-notebook">星幻膜</option>
-																	<option value="2" class="printing-periphery">亚膜</option>
-																	<option value="2" class="printing-periphery">亮膜</option>
-																	<option value="2" class="printing-periphery">皮纹</option>
-																	<option value="2" class="printing-periphery">布纹</option>
-																	<option value="2" class="printing-periphery">磨砂</option>
-																	<option value="2" class="printing-periphery">镭射星星</option>
-																	<option value="2" class="printing-periphery">镭射闪点</option>
-																	<option value="2" class="printing-periphery">镭射爱心</option>
-																	<option value="2" class="printing-periphery">镭射蝴蝶</option>
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">款式：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">数量：</p>
-															<label class="col-xs-9 form-inline">
-																每款
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
-															</label>
-														</div>
-													</li>
-												</ul>
-												<!-- 方形 -->
-												<ul>
-													<li>
-														<h2 class="text-center">方形</h2>
-														<div class="flex-layout">
-															<p class="col-xs-3">尺寸：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">请选择方形类型</option>
-																	<option value="1" class="printing-notebook">5cm</option>
-																	<!-- <option value="2" class="printing-periphery">3.2</option> -->
-																	<!-- <option value="2" class="printing-periphery">3.7</option> -->
-																	<!-- <option value="2" class="printing-periphery">4.4</option> -->
-																	<!-- <option value="2" class="printing-periphery">5.8</option> -->
-																	<!-- <option value="2" class="printing-periphery">7.5</option> -->
-																	<!-- <option value="2" class="printing-periphery">10</option> -->
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">覆膜：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">覆膜</option>
-																	<option value="1" class="printing-notebook">星幻膜</option>
-																	<option value="2" class="printing-periphery">亚膜</option>
-																	<option value="2" class="printing-periphery">亮膜</option>
-																	<option value="2" class="printing-periphery">皮纹</option>
-																	<option value="2" class="printing-periphery">布纹</option>
-																	<option value="2" class="printing-periphery">磨砂</option>
-																	<option value="2" class="printing-periphery">镭射星星</option>
-																	<option value="2" class="printing-periphery">镭射闪点</option>
-																	<option value="2" class="printing-periphery">镭射爱心</option>
-																	<option value="2" class="printing-periphery">镭射蝴蝶</option>
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">款式：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">数量：</p>
-															<label class="col-xs-9 form-inline">
-																每款
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
-															</label>
-														</div>
-													</li>
-												</ul>
-												<!-- 心形 -->
-												<ul>
-													<li>
-														<h2 class="text-center">心形</h2>
-														<div class="flex-layout">
-															<p class="col-xs-3">尺寸：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">请选择心形类型</option>
-																	<option value="1" class="printing-notebook">3.8cm*4.2cm</option>
-																	<option value="2" class="printing-periphery">5.7cm*5.2cm</option>
-																	<!-- <option value="2" class="printing-periphery">3.7</option> -->
-																	<!-- <option value="2" class="printing-periphery">4.4</option> -->
-																	<!-- <option value="2" class="printing-periphery">5.8</option> -->
-																	<!-- <option value="2" class="printing-periphery">7.5</option> -->
-																	<!-- <option value="2" class="printing-periphery">10</option> -->
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">覆膜：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">覆膜</option>
-																	<option value="1" class="printing-notebook">亮膜</option>
-																	<!-- <option value="2" class="printing-periphery">亚膜</option>
-																	<option value="2" class="printing-periphery">亮膜</option>
-																	<option value="2" class="printing-periphery">皮纹</option>
-																	<option value="2" class="printing-periphery">布纹</option>
-																	<option value="2" class="printing-periphery">磨砂</option>
-																	<option value="2" class="printing-periphery">镭射星星</option>
-																	<option value="2" class="printing-periphery">镭射闪点</option>
-																	<option value="2" class="printing-periphery">镭射爱心</option>
-																	<option value="2" class="printing-periphery">镭射蝴蝶</option> -->
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">款式：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">数量：</p>
-															<label class="col-xs-9 form-inline">
-																每款
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
-															</label>
-														</div>
-													</li>
-												</ul>
-												<!-- 长方形 -->
-												<ul>
-													<li>
-														<h2 class="text-center">长方形</h2>
-														<div class="flex-layout">
-															<p class="col-xs-3">尺寸：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">请选择长方形类型</option>
-																	<option value="1" class="printing-notebook">2.3cm*4.2cm</option>
-																	<option value="2" class="printing-periphery">5.7cm*5.2cm</option>
-																	<!-- <option value="2" class="printing-periphery">3.7</option> -->
-																	<!-- <option value="2" class="printing-periphery">4.4</option> -->
-																	<!-- <option value="2" class="printing-periphery">5.8</option> -->
-																	<!-- <option value="2" class="printing-periphery">7.5</option> -->
-																	<!-- <option value="2" class="printing-periphery">10</option> -->
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">覆膜：</p>
-															<label class="col-xs-9 form-inline">
-																<select class="form-control form-class-b-oveLevel">
-																	<option value="0">覆膜</option>
-																	<option value="1" class="printing-notebook">亮膜</option>
-																	<!-- <option value="2" class="printing-periphery">亚膜</option>
-																	<option value="2" class="printing-periphery">亮膜</option>
-																	<option value="2" class="printing-periphery">皮纹</option>
-																	<option value="2" class="printing-periphery">布纹</option>
-																	<option value="2" class="printing-periphery">磨砂</option>
-																	<option value="2" class="printing-periphery">镭射星星</option>
-																	<option value="2" class="printing-periphery">镭射闪点</option>
-																	<option value="2" class="printing-periphery">镭射爱心</option>
-																	<option value="2" class="printing-periphery">镭射蝴蝶</option> -->
-																</select>
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">款式：</p>
-															<label class="col-xs-9 form-inline">
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-															</label>
-														</div>
-														<div class="flex-layout">
-															<p class="col-xs-3">数量：</p>
-															<label class="col-xs-9 form-inline">
-																每款
-																<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
-															</label>
-														</div>
-													</li>
-												</ul>
-											</li>
-										</ul>
-										<p class="text-center text-red">此处会有一段解释性的文字</p>
-									</li>
-								</ul>
-
-								<!-- 色纸 -->
-								<ul>
-									<li>
-										<h2 class="text-center">色纸</h2>
-										<div class="flex-layout">
-											<p class="col-xs-3">请选择包边颜色：</p>
-											<label class="col-xs-9 form-inline">
-												<select class="form-control form-class-b-oveLevel">
-													<option value="0">包边颜色</option>
-													<option value="1" class="printing-notebook">金色</option>
-													<option value="1" class="printing-notebook">银色</option>
-												</select>
-											</label>
-										</div>
-										<div class="flex-layout">
-											<p class="col-xs-3">请选择印刷纸张：</p>
-											<label class="col-xs-9">
-												<select class="form-control form-class-b-oveLevel">
-													<option value="0">印刷纸张</option>
-													<option value="1" class="printing-notebook">铜版纸</option>
-													<option value="1" class="printing-notebook">亚粉纸</option>
-													<option value="1" class="printing-notebook">超感纸</option>
-													<option value="1" class="printing-notebook">其他</option>
-												</select>
-											</label>
-										</div>
-										<div class="flex-layout">
-											<p class="col-xs-3">请选择背面纸张：</p>
-											<label class="col-xs-9">
-												<select class="form-control form-class-b-oveLevel select-other">
-													<option value="0">背面纸张</option>
-													<option value="1" class="printing-notebook">飘金纸</option>
-													<option value="1" class="printing-notebook">其他</option>
-												</select>
-												<div class="input-other">
-													<input type="text" class="form-control" placeholder="其他">
-												</div>
-											</label>
-										</div>
-										<div class="flex-layout">
-											<p class="col-xs-3">覆膜：</p>
-											<label class="col-xs-9">
-												<select class="form-control form-class-b-oveLevel">
-													<option value="0">覆膜</option>
-													<option value="1" class="printing-notebook">亮膜</option>
-													<option value="1" class="printing-notebook">亚膜</option>
-													<option value="1" class="printing-notebook">不覆膜</option>
-												</select>
-											</label>
-										</div>
-										<div class="flex-layout">
-											<p class="col-xs-3">特殊工艺：</p>
-											<label class="col-xs-9">
-												<label class="checkbox-inline">
-													<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫金
-												</label>
-												<label class="checkbox-inline">
-													<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫银
-												</label>
-												<label class="checkbox-inline">
-													<input type="checkbox" id="inlineCheckbox2" value="option2"> 镭射银
-												</label>
-											</label>
-										</div>
-										<div class="flex-layout">
-											<p class="col-xs-3">尺寸：</p>
-											<label class="col-xs-9 form-inline">
-												<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
-												<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
-											</label>
-										</div>
-										<div class="flex-layout">
-											<p class="col-xs-3">款式：</p>
-											<label class="col-xs-9 form-inline">
-												<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-											</label>
-										</div>
-										<div class="flex-layout">
-											<p class="col-xs-3">数量：</p>
-											<label class="col-xs-9 form-inline">
-												每款
-												<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
-											</label>
-										</div>
-									</li>
-								</ul>
-								<!-- 贴纸 -->
-								<ul>
-									<li>
-										<h2 class="text-center">贴纸</h2>
-										<select class="form-control form-class-b-oveLevel">
-											<option value="0">请选择贴纸类型</option>
-											<option value="1" class="printing-notebook">Pvc透明贴纸</option>
-											<option value="2" class="printing-notebook">不干胶</option>
-											<option value="3" class="printing-notebook">Pvc贴纸</option>
-										</select>
-										<!-- Pvc透明贴纸 -->
-										<ul>
-											<li>
-												<h2 class="text-center">Pvc透明贴纸</h2>
-												<select class="form-control form-class-b-oveLevel select-other">
-													<option value="0">请选择Pvc透明贴纸类型</option>
-													<option value="1" class="printing-notebook">21cmx29.7cm</option>
-													<option value="2" class="printing-notebook">17cmx25cm</option>
-													<option value="3" class="printing-notebook">其他</option>
-												</select>
-												<div class="input-other form-inline">
-													<span>其他实物尺寸:</span>
-													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
-													<span>*</span>
-													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">款式：</p>
-													<label class="col-xs-9 form-inline">
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">数量：</p>
-													<label class="col-xs-9 form-inline">
-														每款
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
-													</label>
-												</div>
-											</li>
-										</ul>
-										<!-- 不干胶 -->
-										<ul>
-											<li>
-												<h2 class="text-center">Pvc透明贴纸</h2>
-												<select class="form-control form-class-b-oveLevel select-other">
-													<option value="0">请选择Pvc透明贴纸类型</option>
-													<option value="1" class="printing-notebook">21cmx29.7cm</option>
-													<option value="2" class="printing-notebook">17cmx25cm</option>
-													<option value="3" class="printing-notebook">其他</option>
-												</select>
-												<div class="input-other form-inline">
-													<span>其他实物尺寸:</span>
-													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
-													<span>*</span>
-													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">款式：</p>
-													<label class="col-xs-9 form-inline">
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">数量：</p>
-													<label class="col-xs-9 form-inline">
-														每款
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
-													</label>
-												</div>
-											</li>
-										</ul>
-										<!-- Pvc贴纸 -->
-										<ul>
-											<li>
-												<h2 class="text-center">Pvc透明贴纸</h2>
-												<select class="form-control form-class-b-oveLevel select-other">
-													<option value="0">请选择Pvc透明贴纸类型</option>
-													<option value="1" class="printing-notebook">21cmx29.7cm</option>
-													<option value="2" class="printing-notebook">17cmx25cm</option>
-													<option value="3" class="printing-notebook">其他</option>
-												</select>
-												<div class="input-other form-inline">
-													<span>其他实物尺寸:</span>
-													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
-													<span>*</span>
-													<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">款式：</p>
-													<label class="col-xs-9 form-inline">
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
-													</label>
-												</div>
-												<div class="flex-layout">
-													<p class="col-xs-3">数量：</p>
-													<label class="col-xs-9 form-inline">
-														每款
-														<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
-													</label>
-												</div>
-											</li>
-										</ul>
-									</li>
+							<!-- 色纸 -->
+							<ul>
+								<li>
+									<h2 class="text-center">色纸</h2>
 									<div class="flex-layout">
-										<p class="col-xs-3">模切：</p>
+										<p class="col-xs-3">请选择包边颜色：</p>
+										<label class="col-xs-9 form-inline">
+											<select class="form-control form-class-b-oveLevel">
+												<option value="0">包边颜色</option>
+												<option value="1" class="printing-notebook">金色</option>
+												<option value="1" class="printing-notebook">银色</option>
+											</select>
+										</label>
+									</div>
+									<div class="flex-layout">
+										<p class="col-xs-3">请选择印刷纸张：</p>
 										<label class="col-xs-9">
 											<select class="form-control form-class-b-oveLevel">
-												<option value="0">模切</option>
-												<option value="1" class="printing-notebook">是</option>
-												<option value="2" class="printing-notebook">否</option>
+												<option value="0">印刷纸张</option>
+												<option value="1" class="printing-notebook">铜版纸</option>
+												<option value="1" class="printing-notebook">亚粉纸</option>
+												<option value="1" class="printing-notebook">超感纸</option>
+												<option value="1" class="printing-notebook">其他</option>
 											</select>
+										</label>
+									</div>
+									<div class="flex-layout">
+										<p class="col-xs-3">请选择背面纸张：</p>
+										<label class="col-xs-9">
+											<select class="form-control form-class-b-oveLevel select-other">
+												<option value="0">背面纸张</option>
+												<option value="1" class="printing-notebook">飘金纸</option>
+												<option value="1" class="printing-notebook">其他</option>
+											</select>
+											<div class="input-other">
+												<input type="text" class="form-control" placeholder="其他">
+											</div>
 										</label>
 									</div>
 									<div class="flex-layout">
@@ -2350,76 +2198,237 @@
 										<label class="col-xs-9">
 											<select class="form-control form-class-b-oveLevel">
 												<option value="0">覆膜</option>
-												<option value="1" class="printing-notebook">是</option>
-												<option value="2" class="printing-notebook">否</option>
+												<option value="1" class="printing-notebook">亮膜</option>
+												<option value="1" class="printing-notebook">亚膜</option>
+												<option value="1" class="printing-notebook">不覆膜</option>
 											</select>
 										</label>
 									</div>
 									<div class="flex-layout">
 										<p class="col-xs-3">特殊工艺：</p>
 										<label class="col-xs-9">
+											<label class="checkbox-inline">
+												<input type="checkbox" id="inlineCheckbox1" value="option1"> 烫金
+											</label>
+											<label class="checkbox-inline">
+												<input type="checkbox" id="inlineCheckbox2" value="option2"> 烫银
+											</label>
+											<label class="checkbox-inline">
+												<input type="checkbox" id="inlineCheckbox2" value="option2"> 镭射银
+											</label>
+										</label>
+									</div>
+									<div class="flex-layout">
+										<p class="col-xs-3">尺寸：</p>
+										<label class="col-xs-9 form-inline">
+											<input type="text" class="form-control record-max-width" id="exampleInputName2" placeholder="尺寸">cm;
+											<span class="">(请将高度或宽度中较长的尺寸填写在此处)</span>
+										</label>
+									</div>
+									<div class="flex-layout">
+										<p class="col-xs-3">款式：</p>
+										<label class="col-xs-9 form-inline">
+											<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+										</label>
+									</div>
+									<div class="flex-layout">
+										<p class="col-xs-3">数量：</p>
+										<label class="col-xs-9 form-inline">
+											每款
+											<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个
+										</label>
+									</div>
+								</li>
+							</ul>
+							<!-- 贴纸 -->
+							<ul>
+								<li>
+									<h2 class="text-center">贴纸</h2>
+									<select class="form-control form-class-b-oveLevel">
+										<option value="0">请选择贴纸类型</option>
+										<option value="1" class="printing-notebook">Pvc透明贴纸</option>
+										<option value="2" class="printing-notebook">不干胶</option>
+										<option value="3" class="printing-notebook">Pvc贴纸</option>
+									</select>
+									<!-- Pvc透明贴纸 -->
+									<ul>
+										<li>
+											<h2 class="text-center">Pvc透明贴纸</h2>
+											<select class="form-control form-class-b-oveLevel select-other">
+												<option value="0">请选择Pvc透明贴纸类型</option>
+												<option value="1" class="printing-notebook">21cmx29.7cm</option>
+												<option value="2" class="printing-notebook">17cmx25cm</option>
+												<option value="3" class="printing-notebook">其他</option>
+											</select>
+											<div class="input-other form-inline">
+												<span>其他实物尺寸:</span>
+												<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
+												<span>*</span>
+												<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">款式：</p>
+												<label class="col-xs-9 form-inline">
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">数量：</p>
+												<label class="col-xs-9 form-inline">
+													每款
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
+												</label>
+											</div>
+										</li>
+									</ul>
+									<!-- 不干胶 -->
+									<ul>
+										<li>
+											<h2 class="text-center">Pvc透明贴纸</h2>
+											<select class="form-control form-class-b-oveLevel select-other">
+												<option value="0">请选择Pvc透明贴纸类型</option>
+												<option value="1" class="printing-notebook">21cmx29.7cm</option>
+												<option value="2" class="printing-notebook">17cmx25cm</option>
+												<option value="3" class="printing-notebook">其他</option>
+											</select>
+											<div class="input-other form-inline">
+												<span>其他实物尺寸:</span>
+												<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
+												<span>*</span>
+												<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">款式：</p>
+												<label class="col-xs-9 form-inline">
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">数量：</p>
+												<label class="col-xs-9 form-inline">
+													每款
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
+												</label>
+											</div>
+										</li>
+									</ul>
+									<!-- Pvc贴纸 -->
+									<ul>
+										<li>
+											<h2 class="text-center">Pvc透明贴纸</h2>
+											<select class="form-control form-class-b-oveLevel select-other">
+												<option value="0">请选择Pvc透明贴纸类型</option>
+												<option value="1" class="printing-notebook">21cmx29.7cm</option>
+												<option value="2" class="printing-notebook">17cmx25cm</option>
+												<option value="3" class="printing-notebook">其他</option>
+											</select>
+											<div class="input-other form-inline">
+												<span>其他实物尺寸:</span>
+												<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">
+												<span>*</span>
+												<input type="text" class="form-control write-num-max-width" id="exampleInputName2" placeholder="尺寸">cm
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">款式：</p>
+												<label class="col-xs-9 form-inline">
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款图
+												</label>
+											</div>
+											<div class="flex-layout">
+												<p class="col-xs-3">数量：</p>
+												<label class="col-xs-9 form-inline">
+													每款
+													<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">个（单款起订数量100个）
+												</label>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<div class="flex-layout">
+									<p class="col-xs-3">模切：</p>
+									<label class="col-xs-9">
+										<select class="form-control form-class-b-oveLevel">
+											<option value="0">模切</option>
+											<option value="1" class="printing-notebook">是</option>
+											<option value="2" class="printing-notebook">否</option>
+										</select>
+									</label>
+								</div>
+								<div class="flex-layout">
+									<p class="col-xs-3">覆膜：</p>
+									<label class="col-xs-9">
+										<select class="form-control form-class-b-oveLevel">
+											<option value="0">覆膜</option>
+											<option value="1" class="printing-notebook">是</option>
+											<option value="2" class="printing-notebook">否</option>
+										</select>
+									</label>
+								</div>
+								<div class="flex-layout">
+									<p class="col-xs-3">特殊工艺：</p>
+									<label class="col-xs-9">
+										<select class="form-control form-class-b-oveLevel">
+											<option value="0">特殊工艺</option>
+											<option value="1" class="printing-notebook">烫金</option>
+											<option value="2" class="printing-notebook">无工艺</option>
+											<option value="2" class="printing-notebook">其他（其它选项请咨询客服） </option>
+										</select>
+									</label>
+								</div>
+								<p class="text-center text-red">此处会有一段解释性的文字</p>
+							</ul>
+							<!-- 异形制品 -->
+							<ul>
+								<li>
+									<h2 class="text-center">异形制品</h2>
+									<p class="padding-grid">
+										<span>如挂件立牌包装包装，腰封，硫酸纸信封，PVC信封，纸盒，纸质海报盒，PVC海报盒，PVC包装盒，PVC外书封（信封/不印刷）等</span>
+										<br>
+										<span>请尽量清楚的文字描述您的所使用的材料，尺寸，特殊工艺，款式和理想中成品的样子等需求</span>
+									</p>
+									<textarea class="form-control" rows="5" placeholder="请详细填写您的需求"></textarea>
+								</li>
+							</ul>
+							<!-- 文件夹 -->
+							<ul>
+								<li>
+									<h2 class="text-center">文件夹</h2>
+									<div class="flex-layout">
+										<p class="col-xs-3">尺寸：</p>
+										<label class="col-xs-9">
 											<select class="form-control form-class-b-oveLevel">
-												<option value="0">特殊工艺</option>
-												<option value="1" class="printing-notebook">烫金</option>
-												<option value="2" class="printing-notebook">无工艺</option>
-												<option value="2" class="printing-notebook">其他（其它选项请咨询客服） </option>
+												<option value="0">尺寸</option>
+												<option value="1" class="printing-notebook">A4-31*22cm</option>
+												<option value="2" class="printing-notebook">A5-15*22cm</option>
 											</select>
 										</label>
 									</div>
-									<p class="text-center text-red">此处会有一段解释性的文字</p>
-								</ul>
-								<!-- 异形制品 -->
-								<ul>
-									<li>
-										<h2 class="text-center">异形制品</h2>
-										<p class="padding-grid">
-											<span>如挂件立牌包装包装，腰封，硫酸纸信封，PVC信封，纸盒，纸质海报盒，PVC海报盒，PVC包装盒，PVC外书封（信封/不印刷）等</span>
-											<br>
-											<span>请尽量清楚的文字描述您的所使用的材料，尺寸，特殊工艺，款式和理想中成品的样子等需求</span>
-										</p>
-										<textarea class="form-control" rows="5" placeholder="请详细填写您的需求"></textarea>
-									</li>
-								</ul>
-								<!-- 文件夹 -->
-								<ul>
-									<li>
-										<h2 class="text-center">文件夹</h2>
-										<div class="flex-layout">
-											<p class="col-xs-3">尺寸：</p>
-											<label class="col-xs-9">
-												<select class="form-control form-class-b-oveLevel">
-													<option value="0">尺寸</option>
-													<option value="1" class="printing-notebook">A4-31*22cm</option>
-													<option value="2" class="printing-notebook">A5-15*22cm</option>
-												</select>
-											</label>
-										</div>
-										<div class="flex-layout">
-											<p class="col-xs-3">款式：</p>
-											<label class="col-xs-9 form-inline">
-												<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款
-											</label>
-										</div>
-										<div class="flex-layout">
-											<p class="col-xs-3">数量：</p>
-											<label class="col-xs-9 form-inline">
-												<select class="form-control form-class-b-oveLevel">
-													<option value="0">数量:</option>
-													<option value="1" class="printing-notebook">单款1000个起订</option>
-													<option value="2" class="printing-notebook">两款各500个起订</option>
-												</select>
-											</label>
-										</div>
-									</li>
-								</ul>
-								<ul>
-									<li>
-										<h2 class="text-center">其他</h2>
-										<textarea placeholder="请尽量清楚的文字描述您的所使用的材料，尺寸，特殊工艺，款式和理想中成品的样子等需求" class="form-control" rows="3"></textarea>
-									</li>
-								</ul>
-							</li>
-						</ul>
+									<div class="flex-layout">
+										<p class="col-xs-3">款式：</p>
+										<label class="col-xs-9 form-inline">
+											<input type="text" class="form-control" id="exampleInputName2" placeholder="款式">款
+										</label>
+									</div>
+									<div class="flex-layout">
+										<p class="col-xs-3">数量：</p>
+										<label class="col-xs-9 form-inline">
+											<select class="form-control form-class-b-oveLevel">
+												<option value="0">数量:</option>
+												<option value="1" class="printing-notebook">单款1000个起订</option>
+												<option value="2" class="printing-notebook">两款各500个起订</option>
+											</select>
+										</label>
+									</div>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<h2 class="text-center">其他</h2>
+									<textarea placeholder="请尽量清楚的文字描述您的所使用的材料，尺寸，特殊工艺，款式和理想中成品的样子等需求" class="form-control" rows="3"></textarea>
+								</li>
+							</ul>
+					</li>
+					</ul>
 					</li>
 				</ul>
 				<!-- 空的 -->
@@ -2439,17 +2448,17 @@
 					</li>
 				</ul>
 				<button class="btn btn-default delete-form margin-10">删除表单</button>
+				</p>
 			</div>
-		</div>
-		<section>
-			<div class="form-group">
-				<div class="margin-10 flex-between">
-					<button type="submit" class="btn btn-default">提交申请表</button>
-					<button class="btn btn-default" id="add-new-form">新增申请表单</button>
+			<section>
+				<div class="form-group">
+					<div class="margin-10 flex-between">
+						<button type="submit" class="btn btn-default" id="submit-form">提交申请表</button>
+						<button class="btn btn-default" id="add-new-form">新增申请表单</button>
+					</div>
 				</div>
-			</div>
-		</section>
-	</div>
+			</section>
+		</div>
 </body>
 
 </html>

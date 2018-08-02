@@ -52,9 +52,9 @@ $(function () {
 		console.log(length);
 		console.log(index);
 		if (length == index) {
-			$(this).parent('label').siblings('.input-other').show();
+			$(this).siblings('.input-other').show();
 		} else {
-			$(this).parent('label').siblings('.input-other').hide();
+			$(this).siblings('.input-other').hide();
 		}
 	})
 
@@ -79,17 +79,94 @@ $(function () {
 		}
 	});
 
-	$('[data-toggle="tooltip"]').tooltip()
+	$('[data-toggle="tooltip"]').tooltip();
+
+	//特殊处理
+	$('body').on('change', '.special-select', function () {
+		let val = $(this).val();
+		if (val == '自定义') {
+			$(this).parents('.flex-layout').siblings('.special-input').show();
+		} else {
+			$(this).parents('.flex-layout').siblings('.special-input').hide();
+		}
+	});
+
+	$('body').on('blur', '.must-write', function () {
+		let name = $(this).val();
+		if (name == '') {
+			$(this).parents('.flex-layout').siblings('.must-red').show();
+		} else {
+			let flag = $(this).siblings('.must-write');
+			if (flag.length < 0) {
+				$(this).parents('.flex-layout').siblings('.must-red').hide();
+			} else {
+				let val = $(this).siblings('.must-write').val();
+				if (val == '') {
+					$(this).parents('.flex-layout').siblings('.must-red').show();
+				} else {
+					$(this).parents('.flex-layout').siblings('.must-red').hide();
+				}
+			}
+		}
+	})
+
+
+	$('body').on('blur', '.most-200', function () {
+		let num = $(this).val();
+		if (num < 200) {
+			$(this).parents('.flex-layout').siblings('.must-red').show();
+		}
+	})
+
+
+
+
+	$('#submit-form').click(function () {
+		let mustArr = $('body').find('.must-red');
+		let flag = true;
+		for (var i = 0; i < mustArr.length; i++) {
+			if (mustArr[i].style.display == 'block') {
+				flag = false;
+			}
+		}
+		if (flag) {
+			alert('可以提交');
+		} else {
+			alert('不可以提交');
+		}
+	});
+
+
+
+
+
+
+
+
+
+
 })
 
 
+
+
 /*
-其他的显示的 textarea :
+1.其他的显示的 textarea :
 和select同级 添加这段代码：
 <div class="input-other">
 	<input type="text" class="form-control" placeholder="其他">
 </div>
 
 给sleect直接添加 class：select-other
+
+2.特殊的情况 使用特殊的class解决  点击事件
+
+3.使用class 将限制最少多少个的 进行控制   
+	200  ：  most-200
+
+
+
+
+
 
 */
