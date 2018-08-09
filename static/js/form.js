@@ -1,6 +1,7 @@
 $(function () {
 	// select
 	// $('.form-class-b select').change(function(){
+
 	$('body').on('change', '.form-class-b select', function () {
 		let isCLass = $(this).hasClass('levelTop');
 		let index = $(this).val();
@@ -14,6 +15,23 @@ $(function () {
 			$(this).siblings('ul').eq('' + selectedIndex + '').show();
 		}
 	});
+
+
+	$('body').on('click', '.choose-oneLevel', function () {
+		let index = $(this).val();
+		console.log(index);
+		if (index == 3) {
+			$(this).parent('.levelTop-grid').siblings('ul').eq(0).show();
+			$(this).parent('.levelTop-grid').siblings('ul').eq(1).show();
+		} else {
+			let selectedIndex = $(this).val() - 1;
+			$(this).parent('.levelTop-grid').siblings('ul').hide();
+			$(this).parent('.levelTop-grid').find('ul').hide();
+			$(this).parent('.levelTop-grid').siblings('ul').eq('' + selectedIndex + '').show();
+		}
+	});
+
+
 
 	//复选框 导出结果   choose-checkbox-ul
 	// $('.choose-checkbox-ul').click(function(){
@@ -59,7 +77,6 @@ $(function () {
 
 	// 新增新的表单
 	$('body').on('click', '#add-new-form', function () {
-		// $('#add-new-form').click(function(){
 		let content = $('.add-form-obj').eq(0).html();
 		let length = $('.add-form-obj').length;
 		if (length - 1 >= 3) {
@@ -133,7 +150,7 @@ $(function () {
 			}
 		}
 		let formClassA = $('.form-class-a').is(':hidden');
-		if(!formClassA){
+		if (!formClassA) {
 			let isShow = $('.must-top-input');
 			for (var j = 0; j < isShow.length; j++) {
 				if (isShow[j].value == '') {
@@ -148,11 +165,11 @@ $(function () {
 		}
 	});
 
-	$('body').on('click','.levelTop',function(){
+	$('body').on('click', '.levelTop', function () {
 		let name = $(this).val();
-		if(name == 2 || name == 4 || name == 5){
+		if (name == 2 || name == 4 || name == 5) {
 			$('.form-class-a').hide();
-		}else{
+		} else {
 			$('.form-class-a').show();
 		}
 	});
